@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Header from "./components/layouts/Header";
-import Footer from "./components/layouts/Footer";
+import Bottom from "./components/layouts/Bottom";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,7 +15,7 @@ function App() {
           <p>Count: {count}</p>
           <button onClick={() => setCount(count + 1)}>Increment</button>
         </main>
-        <Footer />
+        <Bottom />
       </div>
     </>
   );

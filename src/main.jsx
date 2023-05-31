@@ -6,7 +6,7 @@ import Splash from "./components/layouts/Splash.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* <App /> */}
-    <Splash />
+    <App />
+    {/* <Splash /> */}
   </React.StrictMode>
 );
