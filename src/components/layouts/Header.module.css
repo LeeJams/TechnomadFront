@@ -1,9 +1,70 @@
 .header {
+  position: relative;
+  padding-top:11px;
+  padding-bottom:11px;
+  background-color:rgb(250, 247, 205);
+}
+.container{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
-  height: 5rem;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  color: rgb(38, 85, 126);
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.headTitle{
+  font-weight:500;
+}
+.headTitle span {
+  display:block;
+  font-size:1.4rem;
+}
+.userName{
+  color:#111;
+}
+
+.photoBox{
+  width:4.8rem;
+  height:4.8rem;
+  overflow:hidden;
+}
+.photoBox img{
+  max-width:100%;
+  max-height:100%;
+}
+
+.titleArea{
+  display:flex;
+  justify-content: flex-start;
+  align-items:center;
+  height:4rem;
+}
+
+.titleArea .pageName{
+  font-size:1.8rem;
+  font-weight:600;
+  line-height:40px;
+}
+
+.titleArea button{
+  width:2.8rem;
+  height:4rem;
+}
+.titleArea button svg{
+  margin-top:4px;
+  margin-left:-18px;
+}
+
+.btnWrap{
+  padding-top:5px;
+  padding-bottom:5px;
+}
+
+.btnWrap button{
+  width:2.8rem;
+  height:2.8rem;
+  overflow:hidden;
+  margin-left:12px;
+}
+.btnWrap button:first-child{
+  margin-left:0;
 }
