@@ -9,16 +9,16 @@ import BtnShare from "../ui/BtnShare.jsx";
 import BtnHamburger from "../ui/BtnHamburger.jsx";
 
 function Header() {
-  let bgBlue = {
-    backgroundColor: "aliceblue",
-  };
-  let bgPink = {
-    backgroundColor: "pink",
-  };
+  // let bgBlue = {
+  //   backgroundColor: "aliceblue",
+  // };
+  // let bgPink = {
+  //   backgroundColor: "pink",
+  // };
   return (
     <div>
       <header className={classes.header}>
-        <div className={classes.container} style={bgBlue}>
+        <div className={classes.container}>
           <h2 className={classes.headTitle}>
             <span>오늘도 힘차게 담깅!</span>
             <span>
@@ -31,7 +31,7 @@ function Header() {
           </div>
         </div>
 
-        <div className={classes.container} style={bgPink}>
+        <div className={classes.container}>
           <div className={classes.titleArea}>
             {/* 뒤로가기 */}
             <button type="button">
