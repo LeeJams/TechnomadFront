@@ -1,0 +1,45 @@
+.bottomBar{
+    position:fixed;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    min-width:360px;
+    max-width:540px;
+    height:7.2rem;
+    min-height:7.2rem;
+    padding-left:20px;
+    padding-right:20px;
+    background-color:#fff;
+    box-shadow:0px 2px 8px rgba(0,0,0,20%);
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+}
+.menuBox{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding-top:12px;
+    padding-bottom:12px;
+}
+
+.listMenu a,
+.listMenu span{
+    display:block;
+}
+.listMenu .menuIcon{
+    width:3.2rem;
+    height:3.2rem;
+    margin:0 auto;
+}
+.listMenu .menuIcon *{
+    max-width:100%;
+}
+.listMenu .menuName{
+    color:#999;
+    font-size:1rem;
+    text-align:center;
+}
+.listMenu .menuName.active{
+    color:#1EC41E;
+}

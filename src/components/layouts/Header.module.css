@@ -26,7 +26,8 @@
   height:4.8rem;
   overflow:hidden;
 }
-.photoBox img{
+
+.photoBox > img{
   max-width:100%;
   max-height:100%;
 }

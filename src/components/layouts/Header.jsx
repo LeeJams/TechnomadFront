@@ -31,34 +31,29 @@ function Header() {
           </div>
         </div>
 
-        <div className={classes.container}>
+        {/* <div className={classes.container}>
           <div className={classes.titleArea}>
-            {/* 뒤로가기 */}
             <button type="button">
               <BtnBackpage />
             </button>
             <span className={`${classes.pageName} roboto`}>CREW</span>
           </div>
           <div className={classes.btnWrap}>
-            {/* 검색버튼 */}
             <button type="button">
               <BtnSearch />
             </button>
-            {/* 알림버튼 */}
             <button type="button">
               <BtnAlert />
             </button>
 
-            {/* 공유버튼 */}
             <button type="button">
               <BtnShare />
             </button>
-            {/* 햄버거버튼 */}
             <button type="button">
               <BtnHamburger />
             </button>
           </div>
-        </div>
+        </div> */}
       </header>
     </div>
   );

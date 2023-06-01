@@ -1,0 +1,96 @@
+/* 배너 */
+.bannerBox{width:100%;min-height:45.4rem;overflow:hidden;}
+.bannerBox img{max-width:100%;}
+
+/* 크루 정보 */
+.crewInfo{
+    padding-right:20px;
+    padding-left:20px;
+}
+.crewIntroTitle{
+    margin-top:16px;
+    margin-bottom:4px;
+    font-size:2rem;
+    font-weight:500;
+}
+/* 태그 박스 */
+.tagBox{
+    margin-bottom: 12px;
+}
+.tagBox .tags{
+    color:#999;
+    font-size:1.3rem;
+}
+/* 크루 프로필 */
+.crewProfile {
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    padding-bottom:5px;
+}
+.photoBox{
+    width:4.8rem;
+    height:4.8rem;
+    margin-right:12px;
+    overflow:hidden;
+}
+.photoBox > img{
+    max-width:100%;
+    max-height:100%;
+}
+.detailCrewInfo p *{
+    display:inline-block;
+}
+.crewName{
+    font-size:1.5rem;
+    font-weight:500;
+}
+.markGray{
+    height:2.3rem;
+    line-height:21px;
+    margin-left:6px;
+    padding-right:8px;
+    padding-left:8px;
+    color:#b2b2b2;
+    font-size:1.3rem;
+    border:0.1rem solid #ccc;
+    border-radius:30px;
+}
+.crewNum span{
+    color:#444;
+    font-size:1.2rem;
+}
+.crewNum .current{
+    color:#1EC41E;
+}
+
+/* btnWrap */
+.btnWrap {
+    display: flex;
+    justify-content:space-between;
+    padding:10px 20px;
+    background-color:#fff;
+    border-top:0.1rem solid #ECECEC;
+}
+.btn{
+    width:calc(100% - 5.8rem);
+    height:5.2rem;
+    background-color:#1EC41E;
+    color:#fff;
+    font-size:1.8rem;
+    font-weight:500;
+    border-radius:30px;
+}
+.btnHeart {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width:5rem;
+    height:5rem;
+    font-size:1.1rem;
+}
+.btnHeart .ico{
+    width:2rem;
+    height:2rem;
+}
