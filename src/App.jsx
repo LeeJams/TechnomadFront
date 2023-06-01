@@ -7,7 +7,6 @@ function App() {
 
   return (
     <>
-      {/* 리액트에서 태그에 id 걸때 어떻게 하는지 질문 */}
       <div id="layoutWrap">
         <Header />
         <main>
