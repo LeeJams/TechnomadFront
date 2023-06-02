@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Header from "./components/layouts/Header";
 // import Bottom from "./components/layouts/Bottom";
-import JoinCrew from "./components/view/JoinCrew";
+// import JoinCrew from "./components/view/JoinCrew";
+import CrewDetail from "./components/view/CrewDetail";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -15,7 +16,8 @@ function App() {
           <p>Count: {count}</p>
           <button onClick={() => setCount(count + 1)}>Increment</button>
         </main> */}
-        <JoinCrew />
+        {/* <JoinCrew /> */}
+        <CrewDetail />
         {/* <Bottom /> */}
       </div>
     </>
