@@ -1,15 +1,29 @@
 // import;
 import classes from "./CrewDetail.module.css";
 import IcoArrow from "../ui/IcoArrow.jsx";
-import visualBannerCrew from "../../assets/images/banner_01.png";
+import IcoPerson from "../ui/IcoPerson.jsx";
 
 function CrewDetail() {
   return (
     <>
-      <section>
+      <section className={classes.crewDetailInfo}>
         {/* 배너 */}
-        <div className={classes.bannerBox}>
-          <img src={visualBannerCrew} />
+        <div className={classes.bannerBox}></div>
+        <div className={classes.crewInfo}>
+          <p className={classes.crewIntroTitle}>한강지킴이 모여라!</p>
+          <div className={classes.tagBox}>
+            <span className={classes.tags}>#한강</span>
+            <span className={classes.tags}>#저녁런</span>
+            <span className={classes.tags}>#담깅</span>
+          </div>
+          <span className={classes.watchNum}>
+            <IcoPerson />
+            <span className="roboto">2,830</span>
+          </span>
+          <p className={classes.introText}>
+            안녕하세요. 한강지킴이 러너 모임입니다. 매일 1봉투씩 인증해주세요~
+            오늘도 담깅!
+          </p>
         </div>
       </section>
       <section>
@@ -25,7 +39,7 @@ function CrewDetail() {
         <div className={classes.tabContent}>
           <div className={`${classes.listCont} ${classes.bgGray}`}>
             <div>
-              <div className={classes.recordTitle} onClick={() => {}}>
+              <div className={classes.recordTitle} onClick={""}>
                 <strong>오늘의 활동</strong>
                 <span className={classes.icoArrow}>
                   <IcoArrow />

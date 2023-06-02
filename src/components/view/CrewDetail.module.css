@@ -1,12 +1,61 @@
+.crewDetailInfo{
+    width:100%;
+    height:36rem;
+}
+.bgGray {
+    background-color:#F7F8FA;
+}
+
 /* bannerBox */
 .bannerBox{
     width:100%;
-    height:250px;
+    height:200px;
+    background:url('../../assets/images/banner_01.png') no-repeat center / cover;
     overflow:hidden;
 }
-.bannerBox img{width:100%;object-position:right bottom;}
-
-.bgGray {background-color:#F7F8FA !important;}
+.crewInfo{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:19.6rem;
+    padding:32px 20px;
+    background-color:#fff;
+    border:0.1rem solid #E1E1E1;
+    border-top-left-radius:12px;
+    border-top-right-radius:12px;
+}
+.crewIntroTitle{
+    font-size:2rem;
+    font-weight:500;
+    margin-bottom:4px;
+}
+.tagBox{
+    margin-bottom: 4px;
+}
+.tagBox .tags{
+    color:#999;
+    font-size:1.3rem;
+}
+.watchNum{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    height:2.4rem;
+    font-size:1.4rem;
+    font-weight:400;
+}
+.watchNum svg{
+    width:2.4rem;
+    height:2.4rem;
+}
+.watchNum span{
+    color:#999;
+}
+.introText{
+    margin-top:12px;
+    font-size:1.5rem;
+}
 
 /* 탭메뉴 */
 .tabLink {
@@ -24,7 +73,11 @@
     text-align:center;
     border-bottom:0.1rem solid #E1E1E1;
 }
-.tabLink a.active{color:#2e2e2e;border-width:0.2rem;border-color: #2e2e2e;}
+.tabLink a.active{
+    color:#2e2e2e;
+    border-width:0.2rem;
+    border-color: #2e2e2e;
+}
 
 /* tabContent */
 
@@ -34,9 +87,13 @@
 .tabContent .bgGray{
     padding-bottom:90px;
 }
-.recordTitle{padding-top:32px;margin-bottom:20px;}
+.recordTitle{
+    padding-top:32px;
+    margin-bottom:20px;
+}
 .recordTitle strong{
-    font-size:2.2rem;font-weight:500;
+    font-size:2.2rem;
+    font-weight:500;
 }
 .recordTitle .icoArrow{
     display:inline-block;

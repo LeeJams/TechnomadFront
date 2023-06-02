@@ -80,6 +80,7 @@ html{font-size:10px;}
 html,body,div,p,iframe,frameset, h1,h2,h3,h4,h5,h6, strong,span,b,em,var,label,legend, ul,ol,li,dl,dt,dd,
 table,thead,tbody,tfoot,tr,th,td,caption, form,fieldset,input,textarea, sub,sup,img,a,del,button,pre,
 header,footer,section,article,aside,figure,figcaption{padding:0;margin:0;}
+section{position:relative;}
 /* list style reset */
 ul, ol, li{list-style:none;}
 /* tag style reset */
@@ -117,7 +118,7 @@ caption{position: relative;}
 caption > span {position:absolute !important;top:0 !important;left:0 !important;padding:0 !important;border:0 !important;overflow:hidden !important;width:0 !important;height:0 !important;line-height:0 !important;}
 
 /*** global id and classes ***/
-#layoutWrap{position:relative;min-width:360px;max-width:414px;min-height:100vh;margin:auto;box-shadow:0px 2px 12px rgba(0,0,0,0.1);}
+#layoutWrap{position:relative;min-width:360px;max-width:414px;min-height:100vh;height:100%;margin:auto;box-shadow:0px 2px 12px rgba(0,0,0,0.1);}
 
 /* font weight */
 .regular {font-weight:400 !important;}

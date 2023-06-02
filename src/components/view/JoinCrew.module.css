@@ -1,6 +1,14 @@
+.joinCrew{
+    padding-bottom:72px;
+}
 /* 배너 */
-.bannerBox{width:100%;min-height:45.4rem;overflow:hidden;}
-.bannerBox img{max-width:100%;}
+.bannerBox{
+    width:100%;
+    min-height:45.4rem;
+    max-height:45.4rem;
+    background:url('../../assets/images/banner_01.png') no-repeat center / cover;
+    overflow:hidden;
+}
 
 /* 크루 정보 */
 .crewInfo{
@@ -67,6 +75,11 @@
 /* btnWrap */
 .btnWrap {
     display: flex;
+    position:fixed;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    min-width:360px;max-width:414px;
     justify-content:space-between;
     padding:10px 20px;
     background-color:#fff;

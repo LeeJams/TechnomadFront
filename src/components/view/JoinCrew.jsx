@@ -1,17 +1,14 @@
 // import;
 import classes from "./JoinCrew.module.css";
-import visualBannerCrew from "../../assets/images/banner_01.png";
 import profileSampleDog from "../../assets/images/profile_sample_01.png";
 import Heart from "../ui/Heart.jsx";
 
 function JoinCrew() {
   return (
     <>
-      <section>
+      <section className={classes.joinCrew}>
         {/* 배너 */}
-        <div className={classes.bannerBox}>
-          <img src={visualBannerCrew} />
-        </div>
+        <div className={classes.bannerBox}></div>
         {/* 크루정보 */}
         <div className={classes.crewInfo}>
           <p className={classes.crewIntroTitle}>한강지킴이 모여라!</p>
