@@ -1,16 +1,66 @@
-function Home() {
-    return (
-        <>
-        <div>
-            <h1>sad</h1>
-            <h1>sad</h1>
-        </div>
-        <div>
-            <h1>zxc</h1>
-            <h1>zxc</h1>
-        </div>
-        </>
-    )
+import classes from "./Bottom.module.css";
+import icoRecord from "../../assets/images/icones/ico_record.png";
+import IcoCrew from "../ui/IcoCrew.jsx";
+import IcoHome from "../ui/IcoHome.jsx";
+import IcoChallenge from "../ui/IcoChallenge.jsx";
+import IcoPerson from "../ui/IcoPerson.jsx";
+import { Link, useLocation } from "react-router-dom";
+
+function Bottom() {
+  const { pathname } = useLocation();
+
+  const selectColor = (path) => {
+    return pathname.includes(path) ? "#1EC41E" : "#999";
+  };
+
+  return (
+    <div>
+      <div className={classes.bottomBar}>
+        <ul className={classes.menuBox}>
+          <li className={classes.listMenu}>
+            <Link to="/crew">
+              <span className={classes.menuIcon}>
+                <IcoCrew onGreen={selectColor("/crew")} />
+              </span>
+              <span className={classes.menuName}>크루</span>
+            </Link>
+          </li>
+          <li className={classes.listMenu}>
+            <Link to="/record">
+              <span className={classes.menuIcon}>
+                <img src={icoRecord} />
+              </span>
+              <span className={classes.menuName}>기록</span>
+            </Link>
+          </li>
+          <li className={classes.listMenu}>
+            <Link to="/">
+              <span className={classes.menuIcon}>
+                <IcoHome onGreen={selectColor("/")} />
+              </span>
+              <span className={`${classes.menuName} bold`}>홈</span>
+            </Link>
+          </li>
+          <li className={classes.listMenu}>
+            <Link to="/challenge">
+              <span className={classes.menuIcon}>
+                <IcoChallenge onGreen={selectColor("challenge")} />
+              </span>
+              <span className={classes.menuName}>챌린지</span>
+            </Link>
+          </li>
+          <li className={classes.listMenu}>
+            <Link to="mypage">
+              <span className={classes.menuIcon}>
+                <IcoPerson onGreen={selectColor("mypage")} />
+              </span>
+              <span className={classes.menuName}>마이페이지</span>
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
 }
 
-export default Home;
+export default Bottom;

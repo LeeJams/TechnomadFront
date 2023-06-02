@@ -1,17 +1,16 @@
-// import { Link } from "react-router-dom";
-import { useState } from "react";
 import classes from "./Bottom.module.css";
 import icoRecord from "../../assets/images/icones/ico_record.png";
 import IcoCrew from "../ui/IcoCrew.jsx";
 import IcoHome from "../ui/IcoHome.jsx";
 import IcoChallenge from "../ui/IcoChallenge.jsx";
 import IcoPerson from "../ui/IcoPerson.jsx";
+import { Link, useLocation } from "react-router-dom";
 
 function Bottom() {
-  const [color, setColor] = useState("#999");
+  const { pathname } = useLocation();
 
-  const colorHandler = () => {
-    setColor("#1EC41E");
+  const selectColor = (path) => {
+    return pathname.includes(path) ? "#1EC41E" : "#999";
   };
 
   return (
@@ -19,44 +18,44 @@ function Bottom() {
       <div className={classes.bottomBar}>
         <ul className={classes.menuBox}>
           <li className={classes.listMenu}>
-            <a href="#">
-              <span className={classes.menuIcon} onClick={colorHandler}>
-                <IcoCrew onGreen={color} />
+            <Link to="/crew">
+              <span className={classes.menuIcon}>
+                <IcoCrew onGreen={selectColor("/crew")} />
               </span>
               <span className={classes.menuName}>크루</span>
-            </a>
+            </Link>
           </li>
           <li className={classes.listMenu}>
-            <a href="#">
+            <Link to="/record">
               <span className={classes.menuIcon}>
                 <img src={icoRecord} />
               </span>
               <span className={classes.menuName}>기록</span>
-            </a>
+            </Link>
           </li>
           <li className={classes.listMenu}>
-            <a href="#">
+            <Link to="/">
               <span className={classes.menuIcon}>
-                <IcoHome />
+                <IcoHome onGreen={selectColor("/")} />
               </span>
               <span className={`${classes.menuName} bold`}>홈</span>
-            </a>
+            </Link>
           </li>
           <li className={classes.listMenu}>
-            <a href="#">
+            <Link to="/challenge">
               <span className={classes.menuIcon}>
-                <IcoChallenge />
+                <IcoChallenge onGreen={selectColor("challenge")} />
               </span>
               <span className={classes.menuName}>챌린지</span>
-            </a>
+            </Link>
           </li>
           <li className={classes.listMenu}>
-            <a href="#">
+            <Link to="mypage">
               <span className={classes.menuIcon}>
-                <IcoPerson />
+                <IcoPerson onGreen={selectColor("mypage")} />
               </span>
               <span className={classes.menuName}>마이페이지</span>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
