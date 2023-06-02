@@ -25,7 +25,7 @@ function CrewDetail() {
         <div className={classes.tabContent}>
           <div className={`${classes.listCont} ${classes.bgGray}`}>
             <div>
-              <div className={classes.recordTitle} onClick={""}>
+              <div className={classes.recordTitle} onClick={() => {}}>
                 <strong>오늘의 활동</strong>
                 <span className={classes.icoArrow}>
                   <IcoArrow />

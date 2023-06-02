@@ -1,11 +1,11 @@
-function IcoHome() {
+function IcoHome({ onGreen }) {
   return (
     <svg width="32" height="32" viewBox="0 0 32 32">
       <g transform="translate(-164 -698)">
         <path
           d="M16,0A16,16,0,1,1,0,16,16,16,0,0,1,16,0Z"
           transform="translate(164 698)"
-          fill="#999"
+          fill={onGreen}
         />
         <path
           d="M7.757,3.243c2.463,2.463,3.449,5.471,2.2,6.717s-4.254.261-6.718-2.2S-.208,2.287,1.04,1.04,5.294.78,7.757,3.243Z"
