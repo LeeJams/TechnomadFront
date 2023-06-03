@@ -10,21 +10,21 @@ function JoinCrew() {
         {/* 배너 */}
         <div className={classes.bannerBox}></div>
         {/* 크루정보 */}
-        <div className={classes.crewInfo}>
-          <p className={classes.crewIntroTitle}>한강지킴이 모여라!</p>
-          <div className={classes.tagBox}>
-            <span className={classes.tags}>#한강</span>
-            <span className={classes.tags}>#저녁런</span>
-            <span className={classes.tags}>#담깅</span>
+        <div className={`pddSide20 crewInfo`}>
+          <p className={`crewIntroTitle`}>한강지킴이 모여라!</p>
+          <div className={`tagBox`}>
+            <span className={`tags`}>#한강</span>
+            <span className={`tags`}>#저녁런</span>
+            <span className={`tags`}>#담깅</span>
           </div>
-          <div className={classes.crewProfile}>
-            <div className={classes.photoBox}>
+          <div className={`dsFlex pdb5 crewProfile`}>
+            <div className={`photoBox mgr12`}>
               <img src={profileSampleDog} />
             </div>
-            <div className={classes.detailCrewInfo}>
+            <div className={`detailCrewInfo`}>
               <p>
-                <strong className={classes.crewName}>한강수호대</strong>
-                <span className={classes.markGray}>프로필</span>
+                <strong className={`crewName`}>한강수호대</strong>
+                <span className={`markGray`}>프로필</span>
               </p>
               <div className={classes.crewNum}>
                 <span className={classes.current}>3</span>
@@ -37,14 +37,14 @@ function JoinCrew() {
         </div>
 
         {/* 버튼 영역 */}
-        <div className={classes.btnWrap}>
-          <button type="button" className={classes.btnHeart}>
+        <div className={`bwCommon ${classes.btnWrap}`}>
+          <button type="button" className={`dsFlex ${classes.btnHeart}`}>
             <span className={classes.ico}>
               <Heart />
             </span>
             <span className={classes.num}>600</span>
           </button>
-          <button type="button" className={`${classes.btn} ${classes.green}`}>
+          <button type="button" className={`btnGrCommon ${classes.btn}`}>
             참여하기
           </button>
         </div>

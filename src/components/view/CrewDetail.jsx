@@ -10,15 +10,15 @@ function CrewDetail() {
         {/* 배너 */}
         <div className={classes.bannerBox}></div>
         <div className={classes.crewInfo}>
-          <p className={classes.crewIntroTitle}>한강지킴이 모여라!</p>
-          <div className={classes.tagBox}>
-            <span className={classes.tags}>#한강</span>
-            <span className={classes.tags}>#저녁런</span>
-            <span className={classes.tags}>#담깅</span>
+          <p className={`crewIntroTitle`}>한강지킴이 모여라!</p>
+          <div className={`tagBox`}>
+            <span className={`tags`}>#한강</span>
+            <span className={`tags`}>#저녁런</span>
+            <span className={`tags`}>#담깅</span>
           </div>
           <span className={classes.watchNum}>
             <IcoPerson />
-            <span className="roboto">2,830</span>
+            <span className={`roboto ${classes.colorGray}`}>2,830</span>
           </span>
           <p className={classes.introText}>
             안녕하세요. 한강지킴이 러너 모임입니다. 매일 1봉투씩 인증해주세요~
@@ -98,11 +98,8 @@ function CrewDetail() {
               </ul>
             </div>
             {/* 버튼 영역 */}
-            <div className={classes.btnWrap}>
-              <button
-                type="button"
-                className={`${classes.btn} ${classes.green}`}
-              >
+            <div className={`bwCommon ${classes.btnWrap}`}>
+              <button type="button" className={`btnGrCommon ${classes.btn}`}>
                 Damging
               </button>
             </div>
