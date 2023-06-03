@@ -10,7 +10,7 @@ function JoinCrew() {
         {/* 배너 */}
         <div className={classes.bannerBox}></div>
         {/* 크루정보 */}
-        <div className={`pddSide20 crewInfo`}>
+        <div className={`pddSide20 crewInfo pdt16`}>
           <p className={`crewIntroTitle`}>한강지킴이 모여라!</p>
           <div className={`tagBox`}>
             <span className={`tags`}>#한강</span>
@@ -22,10 +22,10 @@ function JoinCrew() {
               <img src={profileSampleDog} />
             </div>
             <div className={`detailCrewInfo`}>
-              <p>
+              <div>
                 <strong className={`crewName`}>한강수호대</strong>
-                <span className={`markGray`}>프로필</span>
-              </p>
+                <span className={`markRoundCom`}>프로필</span>
+              </div>
               <div className={classes.crewNum}>
                 <span className={classes.current}>3</span>
                 <span>/</span>

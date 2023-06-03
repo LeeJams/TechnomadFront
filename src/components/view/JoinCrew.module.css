@@ -5,7 +5,7 @@
 .bannerBox{
     width:100%;
     min-height:45.4rem;
-    max-height:45.4rem;
+    height:calc(100vh - 266px);
     background:url('../../assets/images/banner_01.png') no-repeat center / cover;
     overflow:hidden;
 }
