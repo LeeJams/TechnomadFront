@@ -2,6 +2,7 @@
 import classes from "./CrewDetail.module.css";
 import profileSampleDog from "../../assets/images/profile_sample_01.png";
 import profileSampleCherry from "../../assets/images/profile_sample_cherry.png";
+import profileSampleHangang from "../../assets/images/profile_sample_Hangang.png";
 import IcoArrow from "../ui/IcoArrow.jsx";
 import IcoPerson from "../ui/IcoPerson.jsx";
 import IcoChat from "../ui/IcoChat.jsx";
@@ -223,7 +224,7 @@ function CrewDetail() {
                 <div className={`${classes.listRank} ${classes.winner}`}>
                   <div className={classes.profileRanked}>
                     <div className={`${classes.photoBox}`}>
-                      <img src={profileSampleCherry} />
+                      <img src={profileSampleHangang} />
                     </div>
                     <span className={classes.rank}>1</span>
                   </div>
@@ -251,29 +252,57 @@ function CrewDetail() {
                   </div>
                 </div>
               </div>
-              <ul className={classes.listRecord}>
+              <ul className={`${classes.listRecord} ${classes.flStart}`}>
                 <li>
-                  <div className={classes.label}>참여인원(명)</div>
-                  <div className={classes.textValue}>
-                    <span>12</span>
+                  <div className={`tac ${classes.listNum}`}>4</div>
+                  <div className={classes.userInfo}>
+                    <div className={`${classes.photoBox}`}>
+                      <img src={profileSampleCherry} />
+                    </div>
+                    <strong className={classes.userName}>그리니1</strong>
+                  </div>
+                  <div className={`roboto tar ${classes.textValue}`}>
+                    <span className={classes.num}>7.99</span>
+                    <span className={classes.unit}>L</span>
                   </div>
                 </li>
                 <li>
-                  <div className={classes.label}>수거한 쓰레기(L)</div>
-                  <div className={classes.textValue}>
-                    <span>56.01</span>
+                  <div className={`tac ${classes.listNum}`}>5</div>
+                  <div className={classes.userInfo}>
+                    <div className={`${classes.photoBox}`}>
+                      <img src={profileSampleCherry} />
+                    </div>
+                    <strong className={classes.userName}>그리니2</strong>
+                  </div>
+                  <div className={`roboto tar ${classes.textValue}`}>
+                    <span className={classes.num}>7.99</span>
+                    <span className={classes.unit}>L</span>
                   </div>
                 </li>
                 <li>
-                  <div className={classes.label}>걸음</div>
-                  <div className={classes.textValue}>
-                    <span>260.800</span>
+                  <div className={`tac ${classes.listNum}`}>6</div>
+                  <div className={classes.userInfo}>
+                    <div className={`${classes.photoBox}`}>
+                      <img src={profileSampleCherry} />
+                    </div>
+                    <strong className={classes.userName}>그리니3</strong>
+                  </div>
+                  <div className={`roboto tar ${classes.textValue}`}>
+                    <span className={classes.num}>7.99</span>
+                    <span className={classes.unit}>L</span>
                   </div>
                 </li>
                 <li>
-                  <div className={classes.label}>거리(KM)</div>
-                  <div className={classes.textValue}>
-                    <span>24.81</span>
+                  <div className={`tac ${classes.listNum}`}>7</div>
+                  <div className={classes.userInfo}>
+                    <div className={`${classes.photoBox}`}>
+                      <img src={profileSampleCherry} />
+                    </div>
+                    <strong className={classes.userName}>그리니4</strong>
+                  </div>
+                  <div className={`roboto tar ${classes.textValue}`}>
+                    <span className={classes.num}>7.99</span>
+                    <span className={classes.unit}>L</span>
                   </div>
                 </li>
               </ul>

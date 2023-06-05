@@ -165,7 +165,7 @@ caption > span {position:absolute !important;top:0 !important;left:0 !important;
 
 /* bg */
 .bgGray {background-color:#F7F8FA !important;}
-.bgGreenGradi {background:linear-gradient(#72C972, 50% , #F7F8FA);}
+.bgGreenGradi {background:linear-gradient(#72C972,30%,#F7F8FA);}
 
 /* btn, btn wrap */
 .bwCommon{
@@ -188,7 +188,6 @@ caption > span {position:absolute !important;top:0 !important;left:0 !important;
     color:#fff;
     border-radius:30px;
 }
-
 
 /* 공통 컴포넌트 */
 /* crewInfo */
