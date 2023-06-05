@@ -148,17 +148,24 @@ caption > span {position:absolute !important;top:0 !important;left:0 !important;
 .green{color:#1EC41E !important;}
 .gray{color:#999 !important;}
 .black{color:#2e2e2e !important;}
+.white{color:#fff !important;}
 
 /* font weight */
 .regular {font-weight:400 !important;}
 .medium {font-weight:500 !important;}
 .bold {font-weight:600 !important;}
 
+/* text-align */
+.tal{text-align:left !important;}
+.tac{text-align:center !important;}
+.tar{text-align:right !important;}
+
 /* 영문 */
 .roboto{font-family:"Roboto" !important;}
 
 /* bg */
 .bgGray {background-color:#F7F8FA !important;}
+.bgGreenGradi {background:linear-gradient(#72C972, 50% , #F7F8FA);}
 
 /* btn, btn wrap */
 .bwCommon{
@@ -181,7 +188,6 @@ caption > span {position:absolute !important;top:0 !important;left:0 !important;
     color:#fff;
     border-radius:30px;
 }
-
 
 
 /* 공통 컴포넌트 */
@@ -232,6 +238,10 @@ caption > span {position:absolute !important;top:0 !important;left:0 !important;
 .markActive{
     background-color:#1EC41E;
     color:#fff;
+}
+.markRoundCom.bggray{
+    color:#888;
+    border-color:#ECECEC;
 }
 .markRoundCom.leader{
     margin-left:6px;
