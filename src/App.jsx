@@ -2,6 +2,9 @@ import JoinCrew from "./components/view/JoinCrew";
 import CrewDetail from "./components/view/CrewDetail";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/layouts/Layout";
+import Splash from "./components/layouts/Splash";
+import { useEffect, useState } from "react";
+import Login from "./components/view/Login";
 
 const router = createBrowserRouter([
   {
@@ -16,10 +19,22 @@ const router = createBrowserRouter([
       { path: "/mypage", element: <div>마이페이지</div> },
     ],
   },
+  {
+    path: "/login",
+    element: <Login />,
+  },
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  const [isSplash, setIsSplash] = useState(false);
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsSplash(false);
+  //   }, 1000);
+  // }, []);
+
+  return isSplash ? <Splash /> : <RouterProvider router={router} />;
 }
 
 export default App;
