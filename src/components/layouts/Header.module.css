@@ -13,12 +13,17 @@
 .headTitle{
   font-weight:500;
 }
-.headTitle span {
+.headTitle > span {
   display:block;
   font-size:1.4rem;
 }
-.userName{
+.headTitle .userName{
   color:#111;
+}
+.headTitle .textStart{
+  font-size:1.8rem;
+  font-weight:600;
+  line-height:39px;
 }
 
 .photoBox{

@@ -1,0 +1,56 @@
+/* 지도영역 */
+.mapArea{
+    position:relative;
+}
+.mapBox{
+    position:relative;
+    width:100%;
+    height:calc(100vh - 270px);
+    overflow:hidden;
+}
+.mapBox:empty{
+    background-color:#D1D1D1;
+}
+.btnCompass{
+    position:absolute;
+    bottom:30px;
+    left:20px;
+    width:4rem;
+    height:4rem;
+    background-color:#fff;
+    text-align:center;
+    border-radius:50%;
+    box-shadow:0px 3px 6px rgba(0,0,0,16%);
+    overflow:hidden;
+    z-index:9;
+}
+.btnCompass svg{
+    margin:3px auto 0;
+}
+
+/* 기록영역 */
+.recodeBox{
+    position:relative;
+    width:100%;
+    height:27rem;
+    padding-top:30px;
+    background-color:#fff;
+}
+.listMeasure{
+    justify-content:space-between;
+    align-items:center;
+}
+.listMeasure li *{
+    display:block;
+    text-align:center;
+}
+.listMeasure .value{
+    font-size:2.4rem;
+    font-weight:600;
+}
+.listMeasure .unit{
+    margin-top:2px;
+    color:#999;
+    font-size:1.2rem;
+    font-weight:400;
+}
