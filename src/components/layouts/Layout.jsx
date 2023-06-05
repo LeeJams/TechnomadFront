@@ -1,5 +1,5 @@
 import Header from "./Header";
-// import Bottom from "./Bottom";
+import Bottom from "./Bottom";
 import { Outlet } from "react-router-dom";
 
 export default function Layout() {
@@ -7,7 +7,7 @@ export default function Layout() {
     <div id="layoutWrap">
       <Header />
       <Outlet />
-      {/* <Bottom /> */}
+      <Bottom />
     </div>
   );
 }

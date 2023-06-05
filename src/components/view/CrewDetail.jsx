@@ -51,7 +51,7 @@ function CrewDetail() {
           <div className={`${classes.listCont} ${classes.bgGray}`}>
             <div>
               <div className={classes.recordTitle} onClick={""}>
-                <strong>오늘의 활동</strong>
+                <strong>오늘활동</strong>
                 <span className={classes.icoArrow}>
                   <IcoArrow />
                 </span>
@@ -191,11 +191,93 @@ function CrewDetail() {
               </button>
             </div>
           </div>
+
           {/* 랭킹 */}
-          <div className={classes.listCont}>
-            3
-            <br />
-            <br />
+          <div className={`bgGreenGradi ${classes.listCont}`}>
+            <div>
+              <div
+                className={`${classes.recordTitle} ${classes.white}`}
+                onClick={""}
+              >
+                <strong>오늘랭킹</strong>
+                <span className={classes.icoArrow}>
+                  <IcoArrow />
+                </span>
+              </div>
+              <div className={`dsFlex ${classes.todayRanked}`}>
+                <div className={`${classes.listRank} ${classes.silver}`}>
+                  <div className={classes.profileRanked}>
+                    <div className={`${classes.photoBox}`}>
+                      <img src={profileSampleDog} />
+                    </div>
+                    <span className={classes.rank}>2</span>
+                  </div>
+                  <div className={classes.result}>
+                    <strong className={classes.userName}>테크노마드</strong>
+                    <div className={`roboto tac ${classes.textValue}`}>
+                      <span className={classes.num}>8.00</span>
+                      <span className={classes.unit}>L</span>
+                    </div>
+                  </div>
+                </div>
+                <div className={`${classes.listRank} ${classes.winner}`}>
+                  <div className={classes.profileRanked}>
+                    <div className={`${classes.photoBox}`}>
+                      <img src={profileSampleCherry} />
+                    </div>
+                    <span className={classes.rank}>1</span>
+                  </div>
+                  <div className={classes.result}>
+                    <strong className={classes.userName}>한강수호대</strong>
+                    <div className={`roboto tac ${classes.textValue}`}>
+                      <span className={classes.num}>11.11</span>
+                      <span className={classes.unit}>L</span>
+                    </div>
+                  </div>
+                </div>
+                <div className={`${classes.listRank} ${classes.bronze}`}>
+                  <div className={classes.profileRanked}>
+                    <div className={`${classes.photoBox}`}>
+                      <img src={profileSampleCherry} />
+                    </div>
+                    <span className={classes.rank}>3</span>
+                  </div>
+                  <div className={classes.result}>
+                    <strong className={classes.userName}>체리쨩</strong>
+                    <div className={`roboto tac ${classes.textValue}`}>
+                      <span className={classes.num}>7.99</span>
+                      <span className={classes.unit}>L</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ul className={classes.listRecord}>
+                <li>
+                  <div className={classes.label}>참여인원(명)</div>
+                  <div className={classes.textValue}>
+                    <span>12</span>
+                  </div>
+                </li>
+                <li>
+                  <div className={classes.label}>수거한 쓰레기(L)</div>
+                  <div className={classes.textValue}>
+                    <span>56.01</span>
+                  </div>
+                </li>
+                <li>
+                  <div className={classes.label}>걸음</div>
+                  <div className={classes.textValue}>
+                    <span>260.800</span>
+                  </div>
+                </li>
+                <li>
+                  <div className={classes.label}>거리(KM)</div>
+                  <div className={classes.textValue}>
+                    <span>24.81</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
           {/* 인증 */}
           {/* <div className={classes.listCont}>인증</div> */}
