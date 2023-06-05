@@ -11,8 +11,8 @@ function IcoRunning() {
         <text
           transform="translate(36 130)"
           fill="#707070"
-          font-size="20"
-          font-family="SegoeUIEmoji, Segoe UI Emoji"
+          fontSize="20"
+          fontFamily="SegoeUIEmoji, Segoe UI Emoji"
         >
           <tspan x="0" y="22">
             🏃🏻

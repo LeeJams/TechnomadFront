@@ -44,7 +44,7 @@ function JoinCrew() {
             </span>
             <span className={classes.num}>600</span>
           </button>
-          <button type="button" className={`btnGrCommon ${classes.btn}`}>
+          <button type="button" className={`btnCommon ${classes.btn}`}>
             참여하기
           </button>
         </div>

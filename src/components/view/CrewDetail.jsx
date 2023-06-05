@@ -111,7 +111,7 @@ function CrewDetail() {
             </div>
             {/* 버튼 영역 */}
             <div className={`bwCommon ${classes.btnWrap}`}>
-              <button type="button" className={`btnGrCommon ${classes.btn}`}>
+              <button type="button" className={`btnCommon ${classes.btn}`}>
                 담깅 시작하기
               </button>
             </div>
