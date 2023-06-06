@@ -11,7 +11,7 @@ const Login = () => {
     const id = data.profile.id; // 인가코드 백엔드로 전달
     try {
       await http.post("/common/login", { accountId: id });
-      // TODO : 로그인 성공시 홈으로 이동
+      // TODO : 로그인 성공시 홈으로 이동, 정보 저장 필요
       navigate("/");
     } catch (error) {
       console.log(error);

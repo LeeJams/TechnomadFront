@@ -2,8 +2,40 @@
 import classes from "./JoinCrew.module.css";
 import profileSampleDog from "../../assets/images/profile_sample_01.png";
 import Heart from "../ui/Heart.jsx";
+import { useEffect, useState } from "react";
+import http from "../utils/http";
+import { useNavigate } from "react-router-dom";
 
 function JoinCrew() {
+  const navigate = useNavigate();
+  const [crewInfo, setCrewInfo] = useState({});
+
+  useEffect(() => {
+    const getCrewInfo = async () => {
+      try {
+        // TODO : 크루 정보 조회
+        const res = await http.get("/crew/1");
+        setCrewInfo(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    //getCrewInfo();
+  }, []);
+
+  const joinCrew = async (id) => {
+    try {
+      // TODO : 크루 가입
+      await http.post("/crew/join", { crewId: id });
+      alert("크루에 가입되었습니다.");
+      // TODO : 가입 후 크루 상세 페이지로 이동
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+      alert("크루 가입에 실패했습니다.");
+    }
+  };
+
   return (
     <>
       <section className={classes.joinCrew}>
