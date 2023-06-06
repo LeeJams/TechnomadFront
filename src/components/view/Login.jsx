@@ -1,4 +1,5 @@
 import KakaoLogin from "react-kakao-login";
+import markSplash from "../../assets/images/mark_splash.svg";
 
 const Login = () => {
   const kakaoClientId = "19c04aa22796f9acb5863bdd929c23ef";
@@ -12,11 +13,18 @@ const Login = () => {
   };
   return (
     <div id="layoutWrap">
-      <KakaoLogin
-        token={kakaoClientId}
-        onSuccess={kakaoOnSuccess}
-        onFail={kakaoOnFailure}
-      />
+      <section className={`container dsFlex login`}>
+        <div className={`slogBox`}>
+          <img src={markSplash} />
+        </div>
+        <div className="loginBox">
+          <KakaoLogin
+            token={kakaoClientId}
+            onSuccess={kakaoOnSuccess}
+            onFail={kakaoOnFailure}
+          />
+        </div>
+      </section>
     </div>
   );
 };
