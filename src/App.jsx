@@ -1,3 +1,4 @@
+import Home from "./components/Home";
 import JoinCrew from "./components/view/JoinCrew";
 import CrewDetail from "./components/view/CrewDetail";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -11,7 +12,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <Layout />,
     children: [
-      { index: true, element: <div>홈</div> },
+      { index: true, element: <Home /> },
       { path: "/crew", element: <CrewDetail /> },
       { path: "/crew/join", element: <JoinCrew /> },
       { path: "/record", element: <div>기록</div> },
