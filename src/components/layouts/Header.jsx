@@ -19,7 +19,7 @@ function Header() {
     <div>
       <header className={classes.header}>
         {/* 홈 헤더 */}
-        {/* <div className={classes.container}>
+        <div className={classes.container}>
           <h2 className={classes.headTitle}>
             <span>오늘도 힘차게 담깅!</span>
             <span>
@@ -30,17 +30,17 @@ function Header() {
           <div className={classes.photoBox}>
             <img src={profileSampleDog} />
           </div>
-        </div> */}
+        </div>
 
         {/* 플로깅 페이지 헤더 */}
-        <div className={classes.container}>
+        {/* <div className={classes.container}>
           <h2 className={classes.headTitle}>
             <em className={classes.textStart}>
               <span className="textDate">5월 29일</span>
               한강지킴이 모여라!
             </em>
           </h2>
-        </div>
+        </div> */}
 
         {/* 서브페이지 헤더 */}
         {/* <div className={classes.container}>
