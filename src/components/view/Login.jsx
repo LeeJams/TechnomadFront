@@ -1,6 +1,7 @@
 import KakaoLogin from "react-kakao-login";
 import http from "../utils/http";
 import { useNavigate } from "react-router-dom";
+import markSplash from "../../assets/images/mark_splash.svg";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -24,11 +25,18 @@ const Login = () => {
   };
   return (
     <div id="layoutWrap">
-      <KakaoLogin
-        token={kakaoClientId}
-        onSuccess={kakaoOnSuccess}
-        onFail={kakaoOnFailure}
-      />
+      <section className={`container dsFlex login`}>
+        <div className={`slogBox`}>
+          <img src={markSplash} />
+        </div>
+        <div className="loginBox">
+          <KakaoLogin
+            token={kakaoClientId}
+            onSuccess={kakaoOnSuccess}
+            onFail={kakaoOnFailure}
+          />
+        </div>
+      </section>
     </div>
   );
 };
