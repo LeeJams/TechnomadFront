@@ -329,6 +329,7 @@ caption > span {position:absolute !important;top:0 !important;left:0 !important;
 
 .listRound .detail{
     width:100%;
+    min-height:12rem;
     padding:8px 10px 12px;
     background-color:#fff;
     border:0.1rem solid #E1E1E1;
@@ -337,6 +338,7 @@ caption > span {position:absolute !important;top:0 !important;left:0 !important;
     border-bottom-right-radius:12px;
 }
 .listRound .title{
+    min-height:3.6rem;
     margin-top:6px;
     margin-bottom:12px;
     font-size:1.4rem;
