@@ -8,7 +8,7 @@ function IcoPerson({ onGreen }) {
           r="4.071"
           transform="translate(4.929)"
           fill="none"
-          stroke={onGreen}
+          stroke={onGreen || "#2e2e2e"}
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="1.5"
@@ -17,7 +17,7 @@ function IcoPerson({ onGreen }) {
           d="M2.541,23.14c0-7.589,5.674-8.1,9.19-8.14s8.81.82,8.81,8.14"
           transform="translate(-2.541 -4.145)"
           fill="none"
-          stroke={onGreen}
+          stroke={onGreen || "#2e2e2e"}
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="1.5"
