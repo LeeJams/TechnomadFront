@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import Login from "./components/view/Login";
 import { getCookie } from "./components/utils/cookies";
 import StartPlogging from "./components/run/StartPlogging";
+import MyPage from "./components/view/MyPage";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
       { path: "/crew/join", element: <JoinCrew /> },
       { path: "/record", element: <div>기록</div> },
       { path: "/challenge", element: <div>챌린지</div> },
-      { path: "/mypage", element: <div>마이페이지</div> },
+      { path: "/mypage", element: <MyPage /> },
     ],
   },
   { path: "/run", element: <StartPlogging /> },

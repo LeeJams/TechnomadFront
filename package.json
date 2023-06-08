@@ -15,7 +15,8 @@
     "react-cookie": "^4.1.1",
     "react-dom": "^18.2.0",
     "react-kakao-login": "^2.1.1",
-    "react-router-dom": "^6.11.2"
+    "react-router-dom": "^6.11.2",
+    "swiper": "^9.3.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
@@ -27,5 +28,5 @@
     "eslint-plugin-react-refresh": "^0.3.4",
     "vite": "^4.3.2"
   },
-  "homepage": "https://leejams.github.io/Technomad_Front/"
+  "homepage": "https://leejams.github.io/TechnomadFront/"
 }

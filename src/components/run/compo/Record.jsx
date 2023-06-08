@@ -4,13 +4,32 @@ import classes from "../StartPlogging.module.css";
 
 export default function Record({ isStart }) {
   const [time, setTime] = useState(0);
+  const [walk, setWalk] = useState(0);
+  const [distance, setDistance] = useState(0);
 
   useEffect(() => {
     if (isStart) {
       const timer = setInterval(() => {
         setTime((prev) => prev + 1);
       }, 1000);
-      return () => clearInterval(timer);
+
+      const walk = setInterval(() => {
+        let add = (Math.random() * 10).toFixed(0);
+        setWalk((prev) => prev + Number(add));
+      }, 5000);
+
+      const distance = setInterval(() => {
+        setDistance((prev) => {
+          const distance = (prev + 0.01).toFixed(2);
+          return Number(distance);
+        });
+      }, 13000);
+
+      return () => {
+        clearInterval(timer);
+        clearInterval(walk);
+        clearInterval(distance);
+      };
     }
   }, [isStart]);
 
@@ -30,11 +49,11 @@ export default function Record({ isStart }) {
           <span className={classes.unit}>시간</span>
         </li>
         <li>
-          <strong className={classes.value}>12.560</strong>
+          <strong className={classes.value}>{walk}</strong>
           <span className={classes.unit}>걸음</span>
         </li>
         <li>
-          <strong className={classes.value}>4.81</strong>
+          <strong className={classes.value}>{distance}</strong>
           <span className={classes.unit}>거리(km)</span>
         </li>
       </ul>
