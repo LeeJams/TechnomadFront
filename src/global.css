@@ -392,13 +392,14 @@ caption > span {position:absolute !important;top:0 !important;left:0 !important;
     margin-right:12px;
     border-radius:12px;
     background-color:rgba(30,196,30, 6%);
+    border:0.1rem solid #fff;
     overflow:hidden;
 }
 .listHoriRound li:last-child{
     margin-right:0;
 }
 .listHoriRound li.add{
-    border:0.1rem solid #1EC41E;
+    border-color: #1EC41E;
     text-align:center;
     line-height:80px;
 }
@@ -416,18 +417,40 @@ caption > span {position:absolute !important;top:0 !important;left:0 !important;
     display:inline-block;
 }
 .listHoriRound .bgBox{
+    position:relative;
+    width:8.5rem;
+    height:8.2rem;
+    background-color:rgba(0,0,0,80%);
+    border-radius:12px;
+    z-index:1;
+}
+.listHoriRound .bgBox .bgImg{
     position:absolute;
     top:0;
     left:0;
     width:100%;
     height:100%;
-    background:no-repeat 0 0 / 100%;
-    z-index:1;
+    background: no-repeat 0 0 / cover;
+    opacity:0.8;
 }
-.bgBox.fst{background-image:url('./assets/images/roundSample01.png');}
-.bgBox.sec{background-image:url('./assets/images/roundSample02.png');}
-.bgBox.thr{background-image:url('./assets/images/roundSample03.png');}
-.bgBox.for{background-image:url('./assets/images/roundSample04.png');}
+.bgBox.fst .bgImg{background-image:url('./assets/images/roundSample01.png');}
+.bgBox.sec .bgImg{background-image:url('./assets/images/roundSample02.png');}
+.bgBox.thr .bgImg{background-image:url('./assets/images/roundSample03.png');}
+.bgBox.for .bgImg{background-image:url('./assets/images/roundSample04.png');}
+
+.listHoriRound .listName{
+    display:inline-block;
+    position:absolute;
+    top:12px;
+    left:10px;
+    width:100%;
+    color:#fff;
+    font-size:1.3rem;
+    font-weight:500;
+    z-index: 2;
+    word-break:keep-all;
+    white-space:break-spaces;
+}
 
 
 /* mark */
