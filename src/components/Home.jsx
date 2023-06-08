@@ -81,7 +81,11 @@ function Home() {
                 <span className={`gray ${classes.unit}`}>거리(km)</span>
               </div>
             </div>
-            <button type="button" className={`${classes.btn}`}>
+            <button
+              type="button"
+              className={`${classes.btn}`}
+              onClick={() => navigate("/run")}
+            >
               담깅 시작
             </button>
           </div>
