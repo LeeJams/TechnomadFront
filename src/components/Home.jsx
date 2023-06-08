@@ -36,8 +36,12 @@ function Home() {
       setMyCrewList(response.responseData);
     };
 
-    getMyPloggingHistory();
-    getMyCrewList();
+    try {
+      getMyPloggingHistory();
+      getMyCrewList();
+    } catch (error) {
+      console.log(error);
+    }
   }, []);
 
   return (
