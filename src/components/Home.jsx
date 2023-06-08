@@ -64,18 +64,10 @@ function CrewDetail() {
       <section className={`pddSide20 pdb72 ${classes.myDamgging}`}>
         <h2 className={`h2Title`}>MY 담깅</h2>
         <div className={`tabLink mgb16`}>
-          <a href="#" className={`markRoundCom active`}>
-            #전체
-          </a>
-          <a href="#" className={`markRoundCom`}>
-            #CREW
-          </a>
-          <a href="#" className={`markRoundCom`}>
-            #챌린지
-          </a>
-          <a href="#" className={`markRoundCom`}>
-            #이벤트
-          </a>
+          <button className={`markRoundCom active`}>#전체</button>
+          <button className={`markRoundCom`}>#CREW</button>
+          <button className={`markRoundCom`}>#챌린지</button>
+          <button className={`markRoundCom`}>#이벤트</button>
         </div>
         <div className={`tabContent`}>
           <div>
