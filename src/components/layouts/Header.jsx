@@ -15,6 +15,13 @@ function Header() {
   // let bgPink = {
   //   backgroundColor: "pink",
   // };
+  const onFileChange = (event) => {
+    const {
+      target: { files },
+    } = event;
+    console.log(files);
+  };
+
   return (
     <div>
       <header className={classes.header}>
@@ -31,7 +38,12 @@ function Header() {
             <img src={profileSampleDog} />
           </div>
         </div>
-
+        {/* <input
+          type="file"
+          accept="image/*"
+          capture="camera"
+          onChange={onFileChange}
+        /> */}
         {/* 플로깅 페이지 헤더 */}
         {/* <div className={classes.container}>
           <h2 className={classes.headTitle}>
