@@ -79,9 +79,9 @@ function StartPlogging() {
               </div>
             </div>
             <div className={`dsFlex btnBox`}>
-              {/* 0608 시작버튼으로 수정 */}
               <button type="button" className={`btnCircle`}>
-                시작
+                <span className="hide">일시정지</span>
+                <IcoPause />
               </button>
             </div>
           </div>
