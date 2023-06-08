@@ -43,30 +43,34 @@ function Crew() {
             </li>
             <li>
               <a href="#">
-                <div className={`bgBox fst`}></div>
+                <div className={`bgBox fst`}>
+                  <div className={`bgImg`}></div>
+                </div>
                 <span className={`listName`}>한강런!!</span>
-                <div className={`bgArea`}></div>
               </a>
             </li>
             <li>
               <a href="#">
-                <div className={`bgBox sec`}></div>
+                <div className={`bgBox sec`}>
+                  <div className={`bgImg`}></div>
+                </div>
                 <span className={`listName`}>용산방위대 하루2km</span>
-                <div className={`bgArea`}></div>
               </a>
             </li>
             <li>
               <a href="#">
-                <div className={`bgBox thr`}></div>
+                <div className={`bgBox thr`}>
+                  <div className={`bgImg`}></div>
+                </div>
                 <span className={`listName`}>한강코스 도그런</span>
-                <div className={`bgArea`}></div>
               </a>
             </li>
             <li>
               <a href="#">
-                <div className={`bgBox for`}></div>
+                <div className={`bgBox for`}>
+                  <div className={`bgImg`}></div>
+                </div>
                 <span className={`listName`}>한강코스 도그런</span>
-                <div className={`bgArea`}></div>
               </a>
             </li>
           </ul>
