@@ -11,6 +11,7 @@ import Splash from "./components/layouts/Splash";
 import { useEffect, useState } from "react";
 import Login from "./components/view/Login";
 import { getCookie } from "./components/utils/cookies";
+import StartPlogging from "./components/run/StartPlogging";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
       { path: "/mypage", element: <div>마이페이지</div> },
     ],
   },
+  { path: "/run", element: <StartPlogging /> },
   {
     path: "/login",
     element: <Login />,

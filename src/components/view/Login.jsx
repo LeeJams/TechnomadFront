@@ -13,7 +13,7 @@ const Login = () => {
     try {
       // await http.post("/common/login", { accountId: id });
       // TODO : 로그인 성공시 홈으로 이동
-      setCookie("token", id);
+      setCookie("id", id);
       navigate("/");
     } catch (error) {
       console.log(error);
