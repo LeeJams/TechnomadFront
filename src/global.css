@@ -353,7 +353,7 @@ caption > span {position:absolute !important;top:0 !important;left:0 !important;
     font-size:1.3rem;
 }
 /* tab */
-.tabLink button{margin-right:8px;}
+.tabLink button{margin-right:8px;margin-top:4px;margin-bottom:8px;}
 
 /* articleAppend */
 .articleAppend .listDesc{
