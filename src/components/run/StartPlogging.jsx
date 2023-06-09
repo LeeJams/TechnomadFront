@@ -4,12 +4,32 @@ import IcoRunning from "../ui/IcoRunning.jsx";
 import IcoPincers from "../ui/IcoPincers.jsx";
 import IcoBag from "../ui/IcoBag.jsx";
 import IcoClose from "../ui/IcoClose.jsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Map from "./compo/Map";
 import Record from "./compo/Record";
+import { useLocation } from "react-router-dom";
 
 function StartPlogging() {
   const [isStart, setIsStart] = useState(false);
+  const { state } = useLocation();
+  const [crewNum, setCrewNum] = useState(0);
+
+  useEffect(() => {
+    if (state.isCrew) {
+      const num = setInterval(() => {
+        if (crewNum < 12) {
+          const randomNum = Math.floor(Math.random() * 3) + 1;
+          setCrewNum(crewNum + randomNum);
+        }
+      }, 2000);
+
+      if (crewNum > 12) {
+        clearInterval(num);
+      }
+
+      return () => clearInterval(num);
+    }
+  }, [crewNum, state.isCrew]);
 
   return (
     <div id="layoutWrap">
@@ -28,22 +48,24 @@ function StartPlogging() {
       {/* 지도 */}
       <Map />
 
-      <Record isStart={isStart} />
+      <Record isStart={isStart} isCrew={state.isCrew} />
 
       {/* time Alert 팝업 */}
-      <div
-        className={`dsFlex timeAlert`}
-        style={{
-          zIndex: 2,
-        }}
-      >
-        <IcoRunning />
-        <span className={`alertText`}>500m 내 함께 달리는 크루</span>
-        <span className={`currentRunner`}>
-          <span className={`value green`}>12</span>
-          <span className={`unit`}>&nbsp;명</span>
-        </span>
-      </div>
+      {state.isCrew && (
+        <div
+          className={`dsFlex timeAlert`}
+          style={{
+            zIndex: 2,
+          }}
+        >
+          <IcoRunning />
+          <span className={`alertText`}>500m 내 함께 달리는 크루</span>
+          <span className={`currentRunner`}>
+            <span className={`value green`}>{crewNum}</span>
+            <span className={`unit`}>&nbsp;명</span>
+          </span>
+        </div>
+      )}
 
       {/* 플로깅 시작 팝업 */}
       {!isStart && (

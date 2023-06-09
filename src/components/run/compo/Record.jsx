@@ -3,7 +3,7 @@ import BtnStop from "../../ui/BtnStop.jsx";
 import classes from "../StartPlogging.module.css";
 import { useNavigate } from "react-router-dom";
 
-export default function Record({ isStart }) {
+export default function Record({ isStart, isCrew }) {
   const navigate = useNavigate();
   const [time, setTime] = useState(0);
   const [walk, setWalk] = useState(0);
@@ -65,7 +65,14 @@ export default function Record({ isStart }) {
           className={`btnCircle`}
           onClick={() => {
             console.log("일시정지");
-            navigate("/TechnomadFront/result");
+            navigate("/TechnomadFront/result", {
+              state: {
+                isCrew,
+                timeString,
+                walk,
+                distance,
+              },
+            });
           }}
         >
           <span className="hide">일시정지</span>

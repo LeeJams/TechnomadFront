@@ -15,6 +15,7 @@ import BtnHamburger from "../ui/BtnHamburger.jsx";
 
 import { useEffect, useState } from "react";
 import http from "../utils/http";
+import { useNavigate } from "react-router-dom";
 
 const TAB_LIST = [
   { id: "record", name: "기록" },
@@ -24,6 +25,7 @@ const TAB_LIST = [
 ];
 
 function CrewDetail() {
+  const navigate = useNavigate();
   const [crewInfo, setCrewInfo] = useState({});
   const [currentTab, setCurrentTab] = useState("record");
 
@@ -171,7 +173,17 @@ function CrewDetail() {
                 </div>
                 {/* 버튼 영역 */}
                 <div className={`bwCommon ${classes.btnWrap}`}>
-                  <button type="button" className={`btnCommon ${classes.btn}`}>
+                  <button
+                    type="button"
+                    className={`btnCommon ${classes.btn}`}
+                    onClick={() =>
+                      navigate("/TechnomadFront/run", {
+                        state: {
+                          isCrew: true,
+                        },
+                      })
+                    }
+                  >
                     담깅 시작하기
                   </button>
                 </div>
