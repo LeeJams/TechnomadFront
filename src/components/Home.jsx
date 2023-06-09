@@ -2,8 +2,6 @@ import classes from "./Home.module.css";
 import IcoPerson from "../components/ui/IcoPerson.jsx";
 import Heart from "../components/ui/Heart.jsx";
 import plogLevel from "../assets/images/plogLevel.png";
-import bgSample01 from "../assets/images/bgSample01.png";
-import bgSample02 from "../assets/images/bgSample02.png";
 import IcoRunning from "../components/ui/IcoRunning";
 import { useEffect, useState } from "react";
 import http from "./utils/http";

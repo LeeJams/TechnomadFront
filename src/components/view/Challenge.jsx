@@ -1,10 +1,9 @@
 // import;Crew
 import classes from "./Crew.module.css";
-import bgSample02 from "../../assets/images/bgSample02.png";
-import bgSample04 from "../../assets/images/bgSample04.png";
-import bgSample05 from "../../assets/images/bgSample05.png";
 import IcoArrow from "../ui/IcoArrow.jsx";
 import IcoPerson from "../ui/IcoPerson.jsx";
+import IcoLook from "../ui/IcoLook.jsx";
+import IcoIng from "../ui/IcoIng.jsx";
 import Heart from "../ui/Heart.jsx";
 import BtnAdd from "../ui/BtnAdd.jsx";
 
@@ -89,7 +88,10 @@ function Challenge() {
       {/* 주목할 만한 챌린지 */}
       <section className={`pddSide20`}>
         <h2 className={`h2Title dsFlex`}>
-          주목할 만한 챌린지
+          <span>
+            주목할 만한 챌린지
+            <IcoLook />
+          </span>
           <span>
             <IcoArrow />
           </span>
@@ -98,9 +100,7 @@ function Challenge() {
           {/* 홈, 크루 공통 사용되는 리스트입니다. */}
           <ul className="dsFlex listRound">
             <li>
-              <div className={`image`}>
-                <img src={bgSample02} />
-              </div>
+              <div className={`image bgSample05`}></div>
               <div className={`detail`}>
                 <p className={`title`}>2030 같이 쓰레기 담을 사람!</p>
                 <div className={`dsFlex mglMinus8 articleAppend`}>
@@ -116,9 +116,7 @@ function Challenge() {
               </div>
             </li>
             <li>
-              <div className={`image`}>
-                <img src={bgSample04} />
-              </div>
+              <div className={`image bgSample02`}></div>
               <div className={`detail`}>
                 <p className={`title`}>멍멍런! 챌린지</p>
                 <div className={`dsFlex mglMinus8 articleAppend`}>
@@ -136,8 +134,8 @@ function Challenge() {
           </ul>
         </div>
       </section>
-      <section className={`pddSide20 visualBanner`}>
-        <div className={`bgArea challenge`}></div>
+      <section className={`pddSide20 visualBanner challenge`}>
+        <div className={`bgArea`}></div>
         <div className={`textWrap`}>
           <p className={`gray main`}>이벤트</p>
           <p className={`desc`}>
@@ -149,7 +147,10 @@ function Challenge() {
       </section>
       <section className={`pddSide20 pdb72`}>
         <h2 className={`h2Title dsFlex`}>
-          진행중인 챌린지
+          <span>
+            진행중인 챌린지
+            <IcoIng />
+          </span>
           <span>
             <IcoArrow />
           </span>
@@ -158,11 +159,9 @@ function Challenge() {
           {/* 홈, 크루 공통 사용되는 리스트입니다. */}
           <ul className="dsFlex listRound">
             <li>
-              <div className={`image`}>
-                <img src={bgSample02} />
-              </div>
+              <div className={`image bgSample06`}></div>
               <div className={`detail`}>
-                <p className={`title`}>2030 같이 쓰레기 담을 사람!</p>
+                <p className={`title`}>새싹톤 X 수달보호</p>
                 <div className={`dsFlex mglMinus8 articleAppend`}>
                   <div className={`listDesc`}>
                     <IcoPerson />
@@ -176,11 +175,9 @@ function Challenge() {
               </div>
             </li>
             <li>
-              <div className={`image`}>
-                <img src={bgSample04} />
-              </div>
+              <div className={`image bgSample04`}></div>
               <div className={`detail`}>
-                <p className={`title`}>멍멍런! 챌린지</p>
+                <p className={`title`}>26주 담깅 완주</p>
                 <div className={`dsFlex mglMinus8 articleAppend`}>
                   <div className={`listDesc`}>
                     <IcoPerson />
@@ -194,11 +191,9 @@ function Challenge() {
               </div>
             </li>
             <li>
-              <div className={`image`}>
-                <img src={bgSample05} />
-              </div>
+              <div className={`image bgSample05`}></div>
               <div className={`detail`}>
-                <p className={`title`}>2030 같이 쓰레기 담을 사람!</p>
+                <p className={`title`}>담배꽁초 줍기 마라톤</p>
                 <div className={`dsFlex mglMinus8 articleAppend`}>
                   <div className={`listDesc`}>
                     <IcoPerson />
@@ -212,11 +207,9 @@ function Challenge() {
               </div>
             </li>
             <li>
-              <div className={`image`}>
-                <img src={bgSample02} />
-              </div>
+              <div className={`image bgSample02`}></div>
               <div className={`detail`}>
-                <p className={`title`}>멍멍런! 챌린지</p>
+                <p className={`title`}>하루 0.5리터 담기</p>
                 <div className={`dsFlex mglMinus8 articleAppend`}>
                   <div className={`listDesc`}>
                     <IcoPerson />
