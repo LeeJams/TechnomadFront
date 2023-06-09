@@ -319,7 +319,7 @@ function CrewDetail() {
             // TODO : 랭킹 컴포넌트
             currentTab === "rank" && (
               <div className={`bgGreenGradi listCont pddSide20`}>
-                <div>
+                <div className={`pdb72`}>
                   <div
                     className={`${classes.recordTitle} ${classes.white}`}
                     onClick={""}
