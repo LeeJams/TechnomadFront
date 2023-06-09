@@ -1,5 +1,5 @@
 // import;Crew
-import classes from "../view/Crew.module.css";
+import classes from "./Crew.module.css";
 import bgSample03 from "../../assets/images/bgSample03.png";
 import bgSample04 from "../../assets/images/bgSample04.png";
 import IcoArrow from "../ui/IcoArrow.jsx";
@@ -12,10 +12,10 @@ import { EffectFade, Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-fade";
 
-function Crew() {
+function Challenge() {
   return (
     <>
-      <section className={`slideBanner`}>
+      <section className={`slideBanner challenge`}>
         <div
           style={{
             width: "100%",
@@ -34,26 +34,24 @@ function Crew() {
             loop={true}
           >
             <SwiperSlide>
-              <div className={`bgArea bg01`}>
+              <div className={`bgArea bg03`}>
                 <div className={`textWrap tal`}>
-                  <p className={`main`}>
-                    <span className={`smalltxt`}>5월이니까</span>
-                    담깅도 설레나봄
+                  <p className={`main white`}>
+                    <span className={`smalltxt`}>야생동물 지키기 챌린지</span>
+                    새싹톤 X 수달보호 듀잇런
                   </p>
-                  <p className={`desc`}>
-                    #담깅이 준비한 #플로깅백 #인증 #이벤트
-                  </p>
+                  <p className={`desc white`}>2023.04.01~2023.06.30</p>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className={`bgArea bg02`}>
+              <div className={`bgArea bg04`}>
                 <div className={`textWrap tal`}>
                   <p className={`main`}>
-                    <span className={`smalltxt`}>멍멍런</span>
-                    우리집 강아지 보러 올래?
+                    <span className={`smalltxt`}>매주 참가하는 재미</span>
+                    26주 완성, 퍼펙트 그린 플랜!
                   </p>
-                  <p className={`desc`}>산책도 하고 담깅도 하고~</p>
+                  <p className={`desc gray`}>2023.06.01~2023.06.30</p>
                 </div>
               </div>
             </SwiperSlide>
@@ -119,66 +117,52 @@ function Crew() {
             <IcoArrow />
           </span>
         </h2>
-        <div className={`tabLink mgb16`}>
-          <button className={`markRoundCom active`}>#서울</button>
-          <button className={`markRoundCom`}>#한강</button>
-          <button className={`markRoundCom`}>#관악구</button>
-          <button className={`markRoundCom`}>#마라톤준비</button>
-          <button className={`markRoundCom`}>#MZ</button>
-          <button className={`markRoundCom`}>#도그런</button>
-          <button className={`markRoundCom`}>#퇴근길</button>
-        </div>
-        <div className={`tabContent`}>
-          <div>
-            {/* 홈, 크루 공통 사용되는 리스트입니다. */}
-            <ul className="dsFlex listRound">
-              <li>
-                <div className={`image`}>
-                  <img src={bgSample03} />
-                </div>
-                <div className={`detail`}>
-                  <span className={`markRoundCom type`}>CREW</span>
-                  <p className={`title`}>2030 같이 쓰레기 담을 사람!</p>
-                  <div className={`dsFlex mglMinus8 articleAppend`}>
-                    <div className={`listDesc`}>
-                      <IcoPerson />
-                      <span className={`roboto gray`}>15</span>
-                    </div>
-                    <div className={`listDesc`}>
-                      <Heart />
-                      <span className={`roboto gray`}>200</span>
-                    </div>
+        <div className={`mgb16`}>
+          {/* 홈, 크루 공통 사용되는 리스트입니다. */}
+          <ul className="dsFlex listRound">
+            <li>
+              <div className={`image`}>
+                <img src={bgSample03} />
+              </div>
+              <div className={`detail`}>
+                <span className={`markRoundCom type`}>CREW</span>
+                <p className={`title`}>2030 같이 쓰레기 담을 사람!</p>
+                <div className={`dsFlex mglMinus8 articleAppend`}>
+                  <div className={`listDesc`}>
+                    <IcoPerson />
+                    <span className={`roboto gray`}>15</span>
+                  </div>
+                  <div className={`listDesc`}>
+                    <Heart />
+                    <span className={`roboto gray`}>200</span>
                   </div>
                 </div>
-              </li>
-              <li>
-                <div className={`image`}>
-                  <img src={bgSample04} />
-                </div>
-                <div className={`detail`}>
-                  <span className={`markRoundCom type`}>챌린지</span>
-                  <p className={`title`}>멍멍런! 챌린지</p>
-                  <div className={`dsFlex mglMinus8 articleAppend`}>
-                    <div className={`listDesc`}>
-                      <IcoPerson />
-                      <span className={`roboto gray`}>15</span>
-                    </div>
-                    <div className={`listDesc`}>
-                      <Heart />
-                      <span className={`roboto gray`}>200</span>
-                    </div>
+              </div>
+            </li>
+            <li>
+              <div className={`image`}>
+                <img src={bgSample04} />
+              </div>
+              <div className={`detail`}>
+                <span className={`markRoundCom type`}>챌린지</span>
+                <p className={`title`}>멍멍런! 챌린지</p>
+                <div className={`dsFlex mglMinus8 articleAppend`}>
+                  <div className={`listDesc`}>
+                    <IcoPerson />
+                    <span className={`roboto gray`}>15</span>
+                  </div>
+                  <div className={`listDesc`}>
+                    <Heart />
+                    <span className={`roboto gray`}>200</span>
                   </div>
                 </div>
-              </li>
-            </ul>
-          </div>
-          <div></div>
-          <div></div>
-          <div></div>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
     </>
   );
 }
 
-export default Crew;
+export default Challenge;
