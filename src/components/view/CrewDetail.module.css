@@ -168,81 +168,6 @@
 .recordTitle .icoArrow svg{
     transform:rotate(90deg);
 }
-.listRecord{
-    padding:6px 20px;
-    background-color:#fff;
-    border-radius:12px;
-    box-shadow:0px 3px 6px rgba(0,0,0, 8%);
-}
-.listRecord li{
-    display:flex;
-    justify-content:space-between;
-    padding:10px 0;
-    border-bottom:0.2rem solid #F5F5F5;
-}
-.listRecord li:last-child{
-    border:none;
-}
-.listRecord .label{
-    flex:0 0 38.5%;
-    max-width:38.5%;
-    color:#444;
-    font-size:1.5rem;
-    line-height:29px;
-}
-.listRecord .textValue span{
-    color:#1EC41E;
-    font-size:2rem;
-    font-weight:600;
-    font-family:'Roboto';
-}
-
-.listRecord .userInfo *{
-    display:inline-block;
-    vertical-align:middle;
-}
-.listRecord .userInfo .photoBox{
-    width:3.2rem;
-    height:3.2rem;
-}
-.listRecord .userInfo .userName{
-    height:3.2rem;
-    color:#444;
-    font-size:1.4rem;
-    font-weight:400;
-    line-height:32px;
-}
-
-.listRecord.flStart{
-    padding-top:6px;
-    padding-bottom:6px;
-}
-.listRecord.flStart li{
-    justify-content:flex-start;
-    align-items:center;
-}
-.listRecord.flStart li > div {
-    padding:0 8px;
-}
-.listRecord.flStart .listNum{
-    width:9%;
-    color:#999;
-    font-size:1.4rem;
-}
-.listRecord.flStart .userInfo{
-    width:56%;
-}
-.listRecord.flStart .textValue{
-    width:35%;
-}
-.listRecord.flStart .textValue span.num{
-    font-size:1.6rem;
-    font-weight:500;
-}
-.listRecord.flStart .textValue span.unit{
-    font-size:1.2rem;
-    font-weight:400;
-}
 
 /* feed */
 .feed{
@@ -268,15 +193,6 @@
 .feed .insertCont{
     margin-bottom:16px;
     font-size:1.5rem;
-}
-
-.btnEdit {
-    position:absolute;
-    top:32px;
-    right:20px;
-    width:2.4rem;
-    height:2.4rem;
-    overflow:hidden;
 }
 
 /* btnWrap */

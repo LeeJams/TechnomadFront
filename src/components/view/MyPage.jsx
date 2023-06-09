@@ -16,7 +16,7 @@ export default function MyPage() {
       <Swiper
         pagination={true}
         modules={[Autoplay, Pagination]}
-        autoplay={{ delay: 2000 }}
+        autoplay={{ delay: 3000 }}
         className="mySwiper"
         loop={true}
       >

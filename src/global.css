@@ -119,6 +119,45 @@ caption > span {position:absolute !important;top:0 !important;left:0 !important;
 
 
 /*** global id and classes ***/
+/* display */
+.dsFlex{display:flex;}
+
+/* margin */
+.mgr12 {margin-right:12px;}
+.mgb16 {margin-bottom:16px;}
+.mglMinus5 {margin-left:-5px;}
+
+/* padding */
+.pddSide20{padding-right:20px;padding-left:20px;}
+.pddUd20{padding-top:20px;padding-bottom:20px;}
+.pdt16{padding-top:16px;}
+.pdb5{padding-bottom:5px;}
+.pdb16{padding-bottom:16px;}
+.pdb50{padding-bottom:50px;}
+.pdb72{padding-bottom:72px;}
+
+/* fontColor */
+.green{color:#1EC41E !important;}
+.gray{color:#999 !important;}
+.black{color:#2e2e2e !important;}
+.white{color:#fff !important;}
+
+/* font weight */
+.regular {font-weight:400 !important;}
+.medium {font-weight:500 !important;}
+.bold {font-weight:600 !important;}
+
+/* text-align */
+.tal{text-align:left !important;}
+.tac{text-align:center !important;}
+.tar{text-align:right !important;}
+
+/* 영문 */
+.roboto{font-family:"Roboto" !important;}
+
+/* bg */
+.bgGray {background-color:#F7F8FA !important;}
+.bgGreenGradi {background:linear-gradient(#72C972,30%,#F7F8FA);}
 
 /* layoutWrap */
 #layoutWrap{
@@ -131,6 +170,7 @@ caption > span {position:absolute !important;top:0 !important;left:0 !important;
     box-shadow:0px 2px 12px rgba(0,0,0,0.1);
 }
 .h2Title{
+    position:relative;
     padding-top:16px;
     padding-bottom:20px;
     color:#111;
@@ -162,44 +202,6 @@ caption > span {position:absolute !important;top:0 !important;left:0 !important;
     margin-bottom:80px;
 
 }
-/* display */
-.dsFlex{display:flex;}
-
-/* margin */
-.mgr12 {margin-right:12px;}
-.mgb16 {margin-bottom:16px;}
-.mglMinus5 {margin-left:-5px;}
-
-/* padding */
-.pddSide20{padding-right:20px;padding-left:20px;}
-.pdt16{padding-top:16px;}
-.pdb5{padding-bottom:5px;}
-.pdb16{padding-bottom:16px;}
-.pdb50{padding-bottom:50px;}
-.pdb72{padding-bottom:72px;}
-
-/* fontColor */
-.green{color:#1EC41E !important;}
-.gray{color:#999 !important;}
-.black{color:#2e2e2e !important;}
-.white{color:#fff !important;}
-
-/* font weight */
-.regular {font-weight:400 !important;}
-.medium {font-weight:500 !important;}
-.bold {font-weight:600 !important;}
-
-/* text-align */
-.tal{text-align:left !important;}
-.tac{text-align:center !important;}
-.tar{text-align:right !important;}
-
-/* 영문 */
-.roboto{font-family:"Roboto" !important;}
-
-/* bg */
-.bgGray {background-color:#F7F8FA !important;}
-.bgGreenGradi {background:linear-gradient(#72C972,30%,#F7F8FA);}
 
 /* btn, btn wrap */
 .bwCommon{
@@ -246,8 +248,87 @@ caption > span {position:absolute !important;top:0 !important;left:0 !important;
     font-weight:500;
     overflow:hidden;
 }
+.btnEdit {
+    position:absolute;
+    top:32px;
+    right:20px;
+    width:2.4rem;
+    height:2.4rem;
+    overflow:hidden;
+}
+.btnUpload{
+    height:3.5rem;
+    padding-right:12px;
+    padding-left:12px;
+    line-height:33px;
+    border:0.1rem solid #ccc;
+    border-radius:30px;
+}
+.btnUpload svg{
+    width:1.6rem;
+    height:1.6rem;
+    margin-right:6px;
+}
 
 /* 공통 컴포넌트 */
+.header {
+    position: relative;
+    padding-top:11px;
+    padding-bottom:11px;
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.headTitle{
+    font-weight:500;
+}
+.headTitle > span {
+    display:block;
+    font-size:1.4rem;
+}
+.headTitle .userName{
+    color:#111;
+}
+.headTitle .textStart{
+    font-size:1.8rem;
+    font-weight:600;
+    line-height:39px;
+}
+.titleArea{
+    display:flex;
+    justify-content: flex-start;
+    align-items:center;
+    height:4rem;
+}
+.titleArea .pageName{
+    font-size:1.8rem;
+    font-weight:600;
+}
+.pageName em{
+    display:block;
+    color:#777;
+    font-size:1.3rem;
+    font-weight:500;
+}
+.sub .pageName{
+    font-size:1.6rem;
+    font-weight:500;
+}
+.sub .titleArea {
+    height:6rem;
+}
+.titleArea button{
+width:2.8rem;
+height:4rem;
+}
+.titleArea button svg{
+margin-top:4px;
+margin-left:-18px;
+}
 /* crewInfo */
 .crewIntroTitle{
     margin-bottom:4px;
@@ -372,6 +453,7 @@ caption > span {position:absolute !important;top:0 !important;left:0 !important;
     border-radius:10px;
 }
 
+/* 가로스크롤 라운드박스 */
 .horizontalBox{
     padding-bottom:32px;
 }
@@ -382,7 +464,9 @@ caption > span {position:absolute !important;top:0 !important;left:0 !important;
     overflow-x:auto;
     white-space:nowrap;
 }
-.horizontalBox .listHoriRound::-webkit-scrollbar{display:none;}
+.horizontalBox .listHoriRound::-webkit-scrollbar{
+    display:none;
+}
 
 .listHoriRound li{
     display:inline-block;
@@ -451,7 +535,82 @@ caption > span {position:absolute !important;top:0 !important;left:0 !important;
     word-break:keep-all;
     white-space:break-spaces;
 }
+/* listRecord */
+.listRecord{
+    padding:6px 20px;
+    background-color:#fff;
+    border-radius:12px;
+    box-shadow:0px 3px 6px rgba(0,0,0, 8%);
+}
+.listRecord li{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 0;
+    border-bottom:0.2rem solid #F5F5F5;
+}
+.listRecord li:last-child{
+    border:none;
+}
+.listRecord .label{
+    flex:0 0 38.5%;
+    max-width:38.5%;
+    color:#444;
+    font-size:1.5rem;
+    line-height:29px;
+}
+.listRecord .textValue span{
+    color:#1EC41E;
+    font-size:2rem;
+    font-weight:600;
+    font-family:'Roboto';
+}
 
+.listRecord .userInfo *{
+    display:inline-block;
+    vertical-align:middle;
+}
+.listRecord .userInfo .photoBox{
+    width:3.2rem;
+    height:3.2rem;
+}
+.listRecord .userInfo .userName{
+    height:3.2rem;
+    color:#444;
+    font-size:1.4rem;
+    font-weight:400;
+    line-height:32px;
+}
+
+.listRecord.flStart{
+    padding-top:6px;
+    padding-bottom:6px;
+}
+.listRecord.flStart li{
+    justify-content:flex-start;
+    align-items:center;
+}
+.listRecord.flStart li > div {
+    padding:0 8px;
+}
+.listRecord.flStart .listNum{
+    width:9%;
+    color:#999;
+    font-size:1.4rem;
+}
+.listRecord.flStart .userInfo{
+    width:56%;
+}
+.listRecord.flStart .textValue{
+    width:35%;
+}
+.listRecord.flStart .textValue span.num{
+    font-size:1.6rem;
+    font-weight:500;
+}
+.listRecord.flStart .textValue span.unit{
+    font-size:1.2rem;
+    font-weight:400;
+}
 
 /* mark */
 .markRoundCom{
@@ -585,6 +744,66 @@ caption > span {position:absolute !important;top:0 !important;left:0 !important;
     text-align:right;
     font-size:1.5rem;
     font-weight:500;
+}
+
+/* 지도영역 */
+.mapArea{
+    position:relative;
+    height:calc(100vh - 337px);
+}
+
+.mapBox{
+    position:relative;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+.mapBox img{
+    width:100%;
+    height:100%;
+}
+.mapBox:empty{
+    background-color:#D1D1D1;
+}
+
+/* result */
+.resultArea {
+    padding-bottom:12px;
+}
+.resultArea .mapArea{
+    height:28rem;
+}
+.uploadArea {
+    padding-top:6px;
+    background-color:#eee;
+}
+.uploadArea .btnEdit{
+    top:21px;
+}
+.uploadArea > * {
+    padding-top:14px;
+    padding-bottom:32px;
+    background-color: #fff;
+}
+.uploadArea .write{
+    margin-top:6px;
+}
+.uploaded {
+    width:100%;
+    height:auto;
+}
+.uploaded img{
+    width:100%;
+    height:100%;
+}
+.uploadArea .writeText{
+    padding-top:16px;
+    font-size:1.5rem;
+}
+.uploadArea .writeText span {
+    display:block;
+    margin-top:16px;
+    font-size:1.3rem;
 }
 
 /* popLayer */

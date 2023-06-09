@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import IcoPause from "../../ui/IcoPause.jsx";
+import BtnStop from "../../ui/BtnStop.jsx";
 import classes from "../StartPlogging.module.css";
 
 export default function Record({ isStart }) {
@@ -60,7 +60,7 @@ export default function Record({ isStart }) {
       <div className={`dsFlex btnBox`}>
         <button type="button" className={`btnCircle`}>
           <span className="hide">일시정지</span>
-          <IcoPause />
+          <BtnStop />
         </button>
       </div>
     </section>

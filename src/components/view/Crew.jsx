@@ -7,17 +7,51 @@ import IcoPerson from "../ui/IcoPerson.jsx";
 import Heart from "../ui/Heart.jsx";
 import BtnAdd from "../ui/BtnAdd.jsx";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+import "./MyPage.css";
+
 function Crew() {
   return (
     <>
       <section className={`pddSide20 slideBanner`}>
-        <div className={`bgArea`}></div>
-        <div className={`textWrap tal`}>
-          <p className={`main`}>
-            <span className={`smalltxt`}>5월이니까</span>
-            담깅도 설레나봄
-          </p>
-          <p className={`desc`}>#담깅이 준비한 #플로깅백 #인증 #이벤트</p>
+        <div
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          {/* https://swiperjs.com/demos 참고.... */}
+          <Swiper
+            pagination={true}
+            modules={[Autoplay, Pagination]}
+            autoplay={{ delay: 3000 }}
+            className="mySwiper"
+            loop={true}
+          >
+            <SwiperSlide>
+              <div className={`bgArea`}></div>
+              <div className={`textWrap tal`}>
+                <p className={`main`}>
+                  <span className={`smalltxt`}>삐로로뽀뽀뽀</span>
+                  담고담고 또담고
+                </p>
+                <p className={`desc`}>선물도 받아가세요</p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={`bgArea`}></div>
+              <div className={`textWrap tal`}>
+                <p className={`main`}>
+                  <span className={`smalltxt`}>5월이니까</span>
+                  담깅도 설레나봄
+                </p>
+                <p className={`desc`}>#담깅이 준비한 #플로깅백 #인증 #이벤트</p>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
         <div className={`slidePager number`}>
           <span className={`current`}>1</span>

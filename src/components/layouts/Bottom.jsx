@@ -54,19 +54,23 @@ function Bottom() {
             </NavLink>
           </li>
           <li className={classes.listMenu}>
-            <Link to="/">
-              <span className={classes.menuIcon}>
-                <IcoHome onGreen={selectColor("/")} />
-              </span>
-              <span
-                className={`${classes.menuName} bold`}
-                style={{
-                  color: selectColor("/"),
-                }}
-              >
-                홈
-              </span>
-            </Link>
+            <NavLink to="/">
+              {({ isActive }) => (
+                <>
+                  <span className={classes.menuIcon}>
+                    <IcoHome onGreen={selectColor(isActive)} />
+                  </span>
+                  <span
+                    className={classes.menuName}
+                    style={{
+                      color: selectColor(isActive),
+                    }}
+                  >
+                    홈
+                  </span>
+                </>
+              )}
+            </NavLink>
           </li>
           <li className={classes.listMenu}>
             <NavLink to="/challenge">
