@@ -39,8 +39,11 @@ function PopScan() {
                   </li>
                 </ul>
                 <div className={`btnWrap`}>
-                  <button type="button" className={`btnCommon`}>
+                  <button type="button" className={`btnCommon gray`}>
                     돌아가기
+                  </button>
+                  <button type="button" className={`btnCommon`}>
+                    인증 촬영
                   </button>
                 </div>
               </div>

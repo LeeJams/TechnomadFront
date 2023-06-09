@@ -96,16 +96,16 @@ function Home() {
         </div>
       </section>
       <section
-        className={`pddSide20 ${classes.visualBanner}`}
+        className={`pddSide20 visualBanner`}
         onClick={() => navigate("/challenge")}
       >
-        <div className={`${classes.bgArea}`}></div>
-        <div className={`${classes.textWrap}`}>
-          <p className={`gray ${classes.main}`}>SeSAC x 테크노마드</p>
-          <p className={`${classes.desc}`}>
+        <div className={`bgArea home`}></div>
+        <div className={`textWrap`}>
+          <p className={`gray main`}>SeSAC x 테크노마드</p>
+          <p className={`desc`}>
             <strong>오</strong>늘의
             <strong>담</strong>깅<strong>완</strong>료!
-            <strong className={`${classes.large}`}>오담완 챌린지</strong>
+            <strong className={`.large}`}>오담완 챌린지</strong>
           </p>
         </div>
       </section>

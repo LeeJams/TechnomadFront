@@ -147,6 +147,7 @@ caption > span {position:absolute !important;top:0 !important;left:0 !important;
 .dsFlex{display:flex;}
 
 /* margin */
+.mgtMinus16{margin-top:-16px;}
 .mgr12 {margin-right:12px;}
 .mgb16 {margin-bottom:16px;}
 .mglMinus5 {margin-left:-5px;}
@@ -157,6 +158,7 @@ caption > span {position:absolute !important;top:0 !important;left:0 !important;
 .pdt16{padding-top:16px;}
 .pdb5{padding-bottom:5px;}
 .pdb16{padding-bottom:16px;}
+.pdb32{padding-bottom:32px;}
 .pdb50{padding-bottom:50px;}
 .pdb72{padding-bottom:72px;}
 
@@ -391,6 +393,56 @@ margin-left:-18px;
     left:50%;
     transform:translateX(-50%);
 }
+/* visualBanner */
+.visualBanner{
+    position:relative;
+    width:calc(100% - 40px);
+    height:7.9rem;
+    margin:32px auto 16px;
+    border-radius:12px;
+    overflow:hidden;
+}
+.visualBanner .bgArea{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:7.9rem;
+    background: no-repeat 0 center / cover;
+    border-radius:12px;
+    z-index:1;
+}
+.visualBanner .bgArea.home{
+    background-image: url('../assets/images/short_banner_sample.png');
+}
+.visualBanner .bgArea.challenge{
+    background-image: url('./assets/images/short_banner_chall.png');
+}
+.visualBanner .textWrap{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    left:20px;
+    z-index:2;
+}
+.visualBanner .textWrap .main{
+    font-size:1.3rem;
+}
+.visualBanner .textWrap .desc{
+    margin-top:2px;
+    font-size:1.5rem;
+    font-weight:400;
+}
+.visualBanner .textWrap .desc strong{
+    font-size:1.6rem;
+    font-weight:500;
+}
+.visualBanner .textWrap .desc .large{
+    display:inline-block;
+    margin-left:6px;
+    font-size:1.8rem;
+    font-weight:500;
+}
 
 /* slideBanner */
 .slideBanner {
@@ -446,7 +498,6 @@ margin-left:-18px;
     bottom:14px;
     z-index:2;
 }
-
 .slidePager.dot{
     right:unset;
     left:50%;
@@ -659,13 +710,15 @@ margin-left:-18px;
 
 /* listRound */
 .listRound{
+    flex-wrap:wrap;
     justify-content:space-between;
     align-items:baseline;
 }
 .listRound li{
-    flex:0 0 48%;
-    max-width:48%;
-    margin-right:12px;
+    flex:0 0 46.666%;
+    max-width:46.666%;
+    margin-right:1.2%;
+    margin-bottom:16px;
 }
 /* .listRound li:first-child{
     margin-left:-12px;
@@ -983,6 +1036,13 @@ margin-left:-18px;
 }
 .popLayer.top .btnWrap{
     margin-bottom:0;
+}
+.popLayer .btnCommon{
+    min-width:14rem;
+    width: 14rem;
+}
+.popLayer .btnCommon.gray{
+    margin-right:8px;
 }
 
 .popLayer .scanArea{

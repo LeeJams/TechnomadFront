@@ -1,5 +1,5 @@
 // import;
-// import classes from "./CrewDetail.module.css";
+import classes from "../../components/layouts/Header.module.css";
 import confirmSample01 from "../../assets/images/confirmSample01.png";
 import confirmSample02 from "../../assets/images/confirmSample02.png";
 // import IcoArrow from "../ui/IcoArrow.jsx";
@@ -7,7 +7,7 @@ import BtnShare from "../ui/BtnShare.jsx";
 import IcoSprout from "../ui/IcoSprout.jsx";
 import BtnEdit from "../ui/BtnEdit.jsx";
 import IcoCamera from "../ui/IcoCamera.jsx";
-// import Heart from "../ui/Heart.jsx";
+import IcoClose from "../ui/IcoClose.jsx";
 
 function Result() {
   return (
@@ -18,6 +18,11 @@ function Result() {
           <div className={`container`}>
             <div className={`titleArea`}>
               <span className={`pageName`}>담깅 결과</span>
+            </div>
+            <div className={classes.btnWrap}>
+              <button type="button">
+                <IcoClose />
+              </button>
             </div>
           </div>
           <div className={`container sub`}>
@@ -67,7 +72,7 @@ function Result() {
           </ul>
         </div>
       </section>
-      <section className={`uploadArea pdb72`}>
+      <section className={`uploadArea`}>
         <div className={`confirm`}>
           <h2 className={`h2Title dsFlex pddSide20`}>
             <span>

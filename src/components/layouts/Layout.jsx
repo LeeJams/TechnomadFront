@@ -1,8 +1,8 @@
 import Header from "./Header";
 import Bottom from "./Bottom";
-import Running from "../run/StartPlogging";
-// import PopScan from "../run/PopScan";
-// import Crew from "../view/Crew";
+// import Running from "../run/StartPlogging";
+// import Home from "./../Home";
+import Challenge from "../view/Challenge";
 // import { Outlet } from "react-router-dom";
 
 export default function Layout() {
@@ -10,8 +10,8 @@ export default function Layout() {
     <div id="layoutWrap">
       <Header />
       {/* <Outlet /> */}
-      <Running />
-      {/* <Crew /> */}
+      {/* <Running /> */}
+      <Challenge />
       <Bottom />
     </div>
   );

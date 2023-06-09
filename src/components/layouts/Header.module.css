@@ -59,17 +59,17 @@
   margin-left:-18px;
 }
 
-.btnWrap{
+.titleArea .btnWrap{
   padding-top:5px;
   padding-bottom:5px;
 }
 
-.btnWrap button{
+.titleArea .btnWrap button{
   width:2.8rem;
   height:2.8rem;
   overflow:hidden;
   margin-left:12px;
 }
-.btnWrap button:first-child{
+.titleArea .btnWrap button:first-child{
   margin-left:0;
 }

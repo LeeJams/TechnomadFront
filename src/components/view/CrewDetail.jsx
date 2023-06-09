@@ -81,66 +81,66 @@ function CrewDetail() {
             );
           })}
         </div>
-        <div className={classes.tabContent}>
+        <div className={`${classes.tabContent} pdb32`}>
           {/* 기록 */}
           {
             // TODO : 기록 컴포넌트
             currentTab === "record" && (
-              <div className={`${classes.listCont} ${classes.bgGray}`}>
+              <div className={`pddSide20 listCont ${classes.bgGray}`}>
                 <div>
-                  <div className={classes.recordTitle} onClick={""}>
+                  <div className={`${classes.recordTitle}`} onClick={""}>
                     <strong>오늘활동</strong>
-                    <span className={classes.icoArrow}>
+                    <span className={`${classes.icoArrow}`}>
                       <IcoArrow />
                     </span>
                   </div>
-                  <ul className={classes.listRecord}>
+                  <ul className={`listRecord`}>
                     <li>
-                      <div className={classes.label}>참여인원(명)</div>
-                      <div className={classes.textValue}>
+                      <div className={`label`}>참여인원(명)</div>
+                      <div className={`textValue`}>
                         <span>12</span>
                       </div>
                     </li>
                     <li>
-                      <div className={classes.label}>수거한 쓰레기(L)</div>
-                      <div className={classes.textValue}>
+                      <div className={`label`}>수거한 쓰레기(L)</div>
+                      <div className={`textValue`}>
                         <span>56.01</span>
                       </div>
                     </li>
                     <li>
-                      <div className={classes.label}>걸음</div>
-                      <div className={classes.textValue}>
+                      <div className={`label`}>걸음</div>
+                      <div className={`textValue`}>
                         <span>260.800</span>
                       </div>
                     </li>
                     <li>
-                      <div className={classes.label}>거리(KM)</div>
-                      <div className={classes.textValue}>
+                      <div className={`label`}>거리(KM)</div>
+                      <div className={`textValue`}>
                         <span>24.81</span>
                       </div>
                     </li>
                   </ul>
                 </div>
                 <div>
-                  <div className={classes.recordTitle}>
+                  <div className={`${classes.recordTitle}`}>
                     <strong>MY활동</strong>
                   </div>
-                  <ul className={classes.listRecord}>
+                  <ul className={`listRecord`}>
                     <li>
-                      <div className={classes.label}>수거한 쓰레기(L)</div>
-                      <div className={classes.textValue}>
+                      <div className={`label`}>수거한 쓰레기(L)</div>
+                      <div className={`textValue`}>
                         <span>56.01</span>
                       </div>
                     </li>
                     <li>
-                      <div className={classes.label}>걸음</div>
-                      <div className={classes.textValue}>
+                      <div className={`label`}>걸음</div>
+                      <div className={`textValue`}>
                         <span>260.800</span>
                       </div>
                     </li>
                     <li>
-                      <div className={classes.label}>거리(KM)</div>
-                      <div className={classes.textValue}>
+                      <div className={`label`}>거리(KM)</div>
+                      <div className={`textValue`}>
                         <span>24.81</span>
                       </div>
                     </li>
@@ -228,7 +228,7 @@ function CrewDetail() {
                       <span className={`roboto gray`}>200</span>
                     </div>
                   </div>
-                  <button type="button" className={classes.btnEdit}>
+                  <button type="button" className={`btnEdit`}>
                     <span className="hide">게시물 수정</span>
                     <BtnEdit />
                   </button>
@@ -241,7 +241,7 @@ function CrewDetail() {
           {
             // TODO : 랭킹 컴포넌트
             currentTab === "rank" && (
-              <div className={`bgGreenGradi ${classes.listCont}`}>
+              <div className={`bgGreenGradi listCont pddSide20`}>
                 <div>
                   <div
                     className={`${classes.recordTitle} ${classes.white}`}
@@ -299,57 +299,58 @@ function CrewDetail() {
                       </div>
                     </div>
                   </div>
-                  <ul className={`${classes.listRecord} ${classes.flStart}`}>
+
+                  <ul className={`listRecord flStart`}>
                     <li>
-                      <div className={`tac ${classes.listNum}`}>4</div>
-                      <div className={classes.userInfo}>
-                        <div className={`${classes.photoBox}`}>
+                      <div className={`tac listNum`}>4</div>
+                      <div className={`userInfo`}>
+                        <div className={`photoBox`}>
                           <img src={profileSampleCherry} />
                         </div>
-                        <strong className={classes.userName}>그리니1</strong>
+                        <strong className={`userName`}>그리니1</strong>
                       </div>
-                      <div className={`roboto tar ${classes.textValue}`}>
-                        <span className={classes.num}>7.99</span>
-                        <span className={classes.unit}>L</span>
+                      <div className={`roboto tar textValue`}>
+                        <span className={`num`}>7.99</span>
+                        <span className={`unit`}>L</span>
                       </div>
                     </li>
                     <li>
-                      <div className={`tac ${classes.listNum}`}>5</div>
-                      <div className={classes.userInfo}>
-                        <div className={`${classes.photoBox}`}>
+                      <div className={`tac listNum`}>5</div>
+                      <div className={`userInfo`}>
+                        <div className={`photoBox`}>
                           <img src={profileSampleCherry} />
                         </div>
-                        <strong className={classes.userName}>그리니2</strong>
+                        <strong className={`userName`}>그리니2</strong>
                       </div>
-                      <div className={`roboto tar ${classes.textValue}`}>
-                        <span className={classes.num}>7.99</span>
-                        <span className={classes.unit}>L</span>
+                      <div className={`roboto tar textValue`}>
+                        <span className={`num`}>7.99</span>
+                        <span className={`unit`}>L</span>
                       </div>
                     </li>
                     <li>
-                      <div className={`tac ${classes.listNum}`}>6</div>
-                      <div className={classes.userInfo}>
-                        <div className={`${classes.photoBox}`}>
+                      <div className={`tac listNum`}>6</div>
+                      <div className={`userInfo`}>
+                        <div className={`photoBox`}>
                           <img src={profileSampleCherry} />
                         </div>
-                        <strong className={classes.userName}>그리니3</strong>
+                        <strong className={`userName`}>그리니3</strong>
                       </div>
-                      <div className={`roboto tar ${classes.textValue}`}>
-                        <span className={classes.num}>7.99</span>
-                        <span className={classes.unit}>L</span>
+                      <div className={`roboto tar textValue`}>
+                        <span className={`num`}>7.99</span>
+                        <span className={`unit`}>L</span>
                       </div>
                     </li>
                     <li>
-                      <div className={`tac ${classes.listNum}`}>7</div>
-                      <div className={classes.userInfo}>
-                        <div className={`${classes.photoBox}`}>
+                      <div className={`tac listNum`}>7</div>
+                      <div className={`userInfo`}>
+                        <div className={`photoBox`}>
                           <img src={profileSampleCherry} />
                         </div>
-                        <strong className={classes.userName}>그리니4</strong>
+                        <strong className={`userName`}>그리니4</strong>
                       </div>
-                      <div className={`roboto tar ${classes.textValue}`}>
-                        <span className={classes.num}>7.99</span>
-                        <span className={classes.unit}>L</span>
+                      <div className={`roboto tar textValue`}>
+                        <span className={`num`}>7.99</span>
+                        <span className={`unit`}>L</span>
                       </div>
                     </li>
                   </ul>
