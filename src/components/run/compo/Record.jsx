@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import BtnStop from "../../ui/BtnStop.jsx";
 import classes from "../StartPlogging.module.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Record({ isStart }) {
+  const navigate = useNavigate();
   const [time, setTime] = useState(0);
   const [walk, setWalk] = useState(0);
   const [distance, setDistance] = useState(0);
@@ -58,7 +60,14 @@ export default function Record({ isStart }) {
         </li>
       </ul>
       <div className={`dsFlex btnBox`}>
-        <button type="button" className={`btnCircle`}>
+        <button
+          type="button"
+          className={`btnCircle`}
+          onClick={() => {
+            console.log("일시정지");
+            navigate("/TechnomadFront/result");
+          }}
+        >
           <span className="hide">일시정지</span>
           <BtnStop />
         </button>

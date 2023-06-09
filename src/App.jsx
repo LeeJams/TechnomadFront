@@ -15,6 +15,7 @@ import StartPlogging from "./components/run/StartPlogging";
 import MyPage from "./components/view/MyPage";
 import Challenge from "./components/view/Challenge";
 import Crew from "./components/view/Crew";
+import Result from "./components/run/Result";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,7 @@ const router = createBrowserRouter([
     ],
   },
   { path: "/TechnomadFront/run", element: <StartPlogging /> },
+  { path: "/TechnomadFront/result", element: <Result /> },
   { path: "/TechnomadFront/crew/:id", element: <CrewDetail /> },
   {
     path: "/TechnomadFront/login",
