@@ -8,6 +8,7 @@ import IcoPerson from "../ui/IcoPerson.jsx";
 import IcoChat from "../ui/IcoChat.jsx";
 import Heart from "../ui/Heart.jsx";
 import BtnEdit from "../ui/BtnEdit.jsx";
+import BtnWriteGreen from "../ui/BtnWriteGreen.jsx";
 import { useEffect, useState } from "react";
 import http from "../utils/http";
 
@@ -64,7 +65,6 @@ function CrewDetail() {
           </p>
         </div>
       </section>
-
       {/* 탭메뉴 및 컨텐츠 */}
       <section>
         {/* 탭메뉴 */}
@@ -81,7 +81,7 @@ function CrewDetail() {
             );
           })}
         </div>
-        <div className={`${classes.tabContent} ${classes.bgGray}`}>
+        <div className={`${classes.tabContent}`}>
           {/* 기록 */}
           {
             // TODO : 기록 컴포넌트
@@ -306,6 +306,10 @@ function CrewDetail() {
                     <BtnEdit />
                   </button>
                 </div>
+                <button type="button" className={`${classes.btnWriteGreen}`}>
+                  <span className={`hide`}>게시물 작성버튼</span>
+                  <BtnWriteGreen />
+                </button>
               </div>
             )
           }
@@ -434,7 +438,7 @@ function CrewDetail() {
           {/* 인증 */}
           {/* <div className={classes.listCont}>인증</div> */}
         </div>
-      </section>
+      </section>{" "}
     </div>
   );
 }
