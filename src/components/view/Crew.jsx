@@ -1,7 +1,5 @@
 // import;Crew
 import classes from "../view/Crew.module.css";
-import bgSample03 from "../../assets/images/bgSample03.png";
-import bgSample04 from "../../assets/images/bgSample04.png";
 import IcoArrow from "../ui/IcoArrow.jsx";
 import IcoPerson from "../ui/IcoPerson.jsx";
 import Heart from "../ui/Heart.jsx";
@@ -136,9 +134,7 @@ function Crew() {
             {/* 홈, 크루 공통 사용되는 리스트입니다. */}
             <ul className="dsFlex listRound">
               <li>
-                <div className={`image`}>
-                  <img src={bgSample03} />
-                </div>
+                <div className={`image bgSample01`}></div>
                 <div className={`detail`}>
                   <span className={`markRoundCom type`}>CREW</span>
                   <p className={`title`}>2030 같이 쓰레기 담을 사람!</p>
@@ -155,12 +151,10 @@ function Crew() {
                 </div>
               </li>
               <li>
-                <div className={`image`}>
-                  <img src={bgSample04} />
-                </div>
+                <div className={`image bgSample04`}></div>
                 <div className={`detail`}>
                   <span className={`markRoundCom type`}>챌린지</span>
-                  <p className={`title`}>멍멍런! 챌린지</p>
+                  <p className={`title`}>퇴근하는 직장인런</p>
                   <div className={`dsFlex mglMinus8 articleAppend`}>
                     <div className={`listDesc`}>
                       <IcoPerson />

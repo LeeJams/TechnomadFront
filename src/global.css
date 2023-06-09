@@ -563,7 +563,7 @@ caption>span {
 .btnEdit {
     position: absolute;
     top: 32px;
-    right: 20px;
+    right: 9px;
     width: 2.4rem;
     height: 2.4rem;
     overflow: hidden;
@@ -599,61 +599,70 @@ caption>span {
     padding-left: 20px;
 }
 
-.headTitle {
+.header .headTitle {
     font-weight: 500;
 }
 
-.headTitle>span {
+.header .headTitle>span {
     display: block;
     font-size: 1.4rem;
 }
 
-.headTitle .userName {
+.header .headTitle .userName {
     color: #111;
 }
 
-.headTitle .textStart {
+.header .headTitle .textStart {
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 39px;
 }
 
-.titleArea {
+.header .titleArea {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     height: 4rem;
 }
 
-.titleArea .pageName {
+.header .titleArea .pageName {
     font-size: 1.8rem;
     font-weight: 600;
 }
 
-.pageName em {
+.header .pageName em {
     display: block;
     color: #777;
     font-size: 1.3rem;
     font-weight: 500;
 }
 
-.sub .pageName {
+.header .sub .pageName {
     font-size: 1.6rem;
     font-weight: 500;
 }
 
-.sub .titleArea {
+.header .sub .titleArea {
     height: 6rem;
 }
 
-.titleArea button {
+.header .titleArea button {
     width: 2.8rem;
     height: 4rem;
 }
 
-.titleArea button svg {
+.header .titleArea button svg {
     margin-top: 4px;
     margin-left: -18px;
+}
+.header .btnWrap button{
+    width:2.8rem;
+    height:2.8rem;
+    overflow:hidden;
+    margin-left:12px;
+}
+.header .btnWrap button:first-child{
+    margin-left:0;
 }
 
 /* crewInfo */
@@ -1106,12 +1115,17 @@ caption>span {
 }
 .listRound .bgSample01 {
     background-image: url("./assets/images/bgSample01.png");
+    background-size:cover;
 }
 .listRound .bgSample02 {
     background-image: url("./assets/images/bgSample02.png");
 }
-.listRound .bgSample04 {
+.listRound .bgSample03 {
     background-image: url("./assets/images/confirmSample01.png");
+    background-position: center;
+}
+.listRound .bgSample04 {
+    background-image: url("./assets/images/bgSample04.png");
     background-position: center;
 }
 .listRound .bgSample05 {

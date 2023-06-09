@@ -1,4 +1,4 @@
-// import;Crew
+// import;
 import classes from "./Crew.module.css";
 import IcoArrow from "../ui/IcoArrow.jsx";
 import IcoPerson from "../ui/IcoPerson.jsx";
@@ -6,6 +6,8 @@ import IcoLook from "../ui/IcoLook.jsx";
 import IcoIng from "../ui/IcoIng.jsx";
 import Heart from "../ui/Heart.jsx";
 import BtnAdd from "../ui/BtnAdd.jsx";
+import BtnSearch from "../ui/BtnSearch.jsx";
+import BtnAlert from "../ui/BtnAlert.jsx";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Autoplay, Pagination } from "swiper";
@@ -15,6 +17,22 @@ import "swiper/css/effect-fade";
 function Challenge() {
   return (
     <>
+      {/* 헤더 */}
+      <header className={`header`}>
+        <div className={`container`}>
+          <h2 className={`titleArea`}>
+            <span className={`pageName`}>챌린지</span>
+          </h2>
+          <div className={`btnWrap`}>
+            <button type="button">
+              <BtnSearch />
+            </button>
+            <button type="button">
+              <BtnAlert />
+            </button>
+          </div>
+        </div>
+      </header>
       <section className={`slideBanner challenge`}>
         <div
           style={{
@@ -175,7 +193,7 @@ function Challenge() {
               </div>
             </li>
             <li>
-              <div className={`image bgSample04`}></div>
+              <div className={`image bgSample03`}></div>
               <div className={`detail`}>
                 <p className={`title`}>26주 담깅 완주</p>
                 <div className={`dsFlex mglMinus8 articleAppend`}>

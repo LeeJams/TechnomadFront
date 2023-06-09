@@ -10,6 +10,9 @@ import IcoChat from "../ui/IcoChat.jsx";
 import Heart from "../ui/Heart.jsx";
 import BtnEdit from "../ui/BtnEdit.jsx";
 import BtnWriteGreen from "../ui/BtnWriteGreen.jsx";
+import BtnBackpage from "../ui/BtnBackpage.jsx";
+import BtnHamburger from "../ui/BtnHamburger.jsx";
+
 import { useEffect, useState } from "react";
 import http from "../utils/http";
 
@@ -43,6 +46,22 @@ function CrewDetail() {
 
   return (
     <div id="layoutWrap">
+      {/* 헤더 */}
+      <header className={`header`}>
+        <div className={`container`}>
+          <h2 className={`titleArea`}>
+            <button type="button">
+              <BtnBackpage />
+            </button>
+            <span className={`pageName roboto`}>CREW</span>
+          </h2>
+          <div className={`btnWrap`}>
+            <button type="button">
+              <BtnHamburger />
+            </button>
+          </div>
+        </div>
+      </header>
       {/* 상단 배너 및 크루 정보 */}
       <section className={classes.crewDetailInfo}>
         {/* 배너 */}
@@ -212,11 +231,11 @@ function CrewDetail() {
                   <div className={`crewInfo pddSide20`}>
                     <div className={`dsFlex crewProfile`}>
                       <div className={`photoBox mgr12`}>
-                        <img src={profileSampleCherry} />
+                        <img src={profileSampleDog} />
                       </div>
                       <div className={`detailCrewInfo`}>
                         <div>
-                          <strong className={`crewName`}>체리2023</strong>
+                          <strong className={`crewName`}>드마노크테</strong>
                         </div>
                         <div className={classes.recentInfo}>
                           <span className={classes.time}>6시간 전</span>
