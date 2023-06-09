@@ -1,7 +1,7 @@
 // import;Crew
 import classes from "../view/Crew.module.css";
 import bgSample03 from "../../assets/images/bgSample03.png";
-import bgSample04 from "../../assets/images/bgSample04.png";
+import bgSample04 from "../../assets/images/bgSample05.png";
 import IcoArrow from "../ui/IcoArrow.jsx";
 import IcoPerson from "../ui/IcoPerson.jsx";
 import Heart from "../ui/Heart.jsx";
