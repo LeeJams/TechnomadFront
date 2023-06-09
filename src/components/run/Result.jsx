@@ -8,10 +8,22 @@ import IcoSprout from "../ui/IcoSprout.jsx";
 import BtnEdit from "../ui/BtnEdit.jsx";
 import IcoCamera from "../ui/IcoCamera.jsx";
 import IcoClose from "../ui/IcoClose.jsx";
+import { useRef } from "react";
 
 function Result() {
+  const inputFile = useRef(null);
+  const onFileChange = (event) => {
+    const {
+      target: { files },
+    } = event;
+    console.log(files);
+  };
+  const onFileClick = () => {
+    inputFile.current.click();
+  };
+
   return (
-    <>
+    <div id="layoutWrap">
       {/* 담깅 결과 */}
       <section className={`resultArea`}>
         <header className={`header`}>
@@ -54,19 +66,19 @@ function Result() {
             <li>
               <div className={`label`}>걸음</div>
               <div className={`textValue`}>
-                <span>56.01</span>
+                <span>5648</span>
               </div>
             </li>
             <li>
               <div className={`label`}>거리(KM)</div>
               <div className={`textValue`}>
-                <span>260.800</span>
+                <span>3.29</span>
               </div>
             </li>
             <li>
               <div className={`label`}>소요시간</div>
               <div className={`textValue`}>
-                <span>24.81</span>
+                <span>02:36</span>
               </div>
             </li>
           </ul>
@@ -79,10 +91,18 @@ function Result() {
               담깅인증
               <IcoSprout />
             </span>
-            <button type="button" className={`btnUpload`}>
+            <button type="button" className={`btnUpload`} onClick={onFileClick}>
               <IcoCamera />
               추가인증
             </button>
+            <input
+              style={{ display: "none" }}
+              ref={inputFile}
+              type="file"
+              accept="image/*"
+              capture="camera"
+              onChange={onFileChange}
+            />
           </h2>
           <div className="uploaded">
             <img src={confirmSample01} />
@@ -110,7 +130,7 @@ function Result() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 
