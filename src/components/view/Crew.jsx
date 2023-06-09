@@ -4,6 +4,8 @@ import IcoArrow from "../ui/IcoArrow.jsx";
 import IcoPerson from "../ui/IcoPerson.jsx";
 import Heart from "../ui/Heart.jsx";
 import BtnAdd from "../ui/BtnAdd.jsx";
+import BtnSearch from "../ui/BtnSearch.jsx";
+import BtnAlert from "../ui/BtnAlert.jsx";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Autoplay, Pagination } from "swiper";
@@ -16,6 +18,22 @@ function Crew() {
 
   return (
     <>
+      {/* 헤더 */}
+      <header className={`header`}>
+        <div className={`container`}>
+          <h2 className={`titleArea`}>
+            <span className={`pageName`}>CREW</span>
+          </h2>
+          <div className={`btnWrap`}>
+            <button type="button">
+              <BtnSearch />
+            </button>
+            <button type="button">
+              <BtnAlert />
+            </button>
+          </div>
+        </div>
+      </header>
       <section className={`slideBanner`}>
         <div
           style={{

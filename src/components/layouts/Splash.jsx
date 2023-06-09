@@ -8,8 +8,11 @@ function Splash() {
     <>
       <div id="layoutWrap">
         <section className={classes.container}>
-          <div className={classes.slogBox}>
+          <div className={`slogBox`}>
             <img src={markSplash} />
+            <span className={`black`}>
+              지구를 지키는 <strong>가벼운 습관</strong>
+            </span>
           </div>
           <div className={classes.copyright}>
             <img src={footCopyright} />
