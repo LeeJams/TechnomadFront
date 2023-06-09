@@ -64,11 +64,6 @@
 }
 
 /* tabContent */
-.tabContent .listCont>div {
-    padding-right: 20px;
-    padding-left: 20px;
-}
-
 .recordTitle {
     padding-top: 32px;
     margin-bottom: 20px;
@@ -194,8 +189,7 @@
 /* feed */
 .feed {
     position: relative;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding:32px 0;
     border-bottom: 0.1rem solid #E1E1E1;
 }
 
@@ -203,6 +197,7 @@
     display: inline-block;
     height: 2.5rem;
     line-height: 23px;
+    margin-left:20px;
     margin-bottom: 12px;
     background-color: #1EC41E;
     color: #fff;
@@ -215,9 +210,17 @@
     font-size: 1.2rem;
 }
 
-.feed .insertCont {
+.feed .insertCont p{
+    margin-top: 16px;
     margin-bottom: 16px;
+    padding-right:20px;
+    padding-left:20px;
     font-size: 1.5rem;
+    overflow:hidden;
+}
+.feed .insertCont img {
+    max-width:100%;
+    max-height:100%;
 }
 
 /* btnWrap */

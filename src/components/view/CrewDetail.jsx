@@ -3,6 +3,7 @@ import classes from "./CrewDetail.module.css";
 import profileSampleDog from "../../assets/images/profile_sample_01.png";
 import profileSampleCherry from "../../assets/images/profile_sample_cherry.png";
 import profileSampleHangang from "../../assets/images/profile_sample_Hangang.png";
+import feedImg from "../../assets/images/banner_2.png";
 import IcoArrow from "../ui/IcoArrow.jsx";
 import IcoPerson from "../ui/IcoPerson.jsx";
 import IcoChat from "../ui/IcoChat.jsx";
@@ -166,10 +167,10 @@ function CrewDetail() {
                 {/* 공지글 */}
                 <div className={classes.feed}>
                   <span className={`markRoundCom ${classes.notice}`}>공지</span>
-                  <div className={`crewInfo`}>
+                  <div className={`crewInfo pddSide20`}>
                     <div className={`dsFlex pdb16 crewProfile`}>
                       <div className={`photoBox mgr12`}>
-                        <img src={profileSampleDog} />
+                        <img src={profileSampleHangang} />
                       </div>
                       <div className={`detailCrewInfo`}>
                         <div>
@@ -182,14 +183,16 @@ function CrewDetail() {
                       </div>
                     </div>
                   </div>
-                  <p className={classes.insertCont}>
-                    한강지킴이 크루 규칙입니다. 필독사항!
-                    <br />
-                    1. 크루활동은 자유롭게 언제든지 가능합니다.
-                    <br />
-                    2. 자주... <span className={`gray`}>더보기</span>
-                  </p>
-                  <div className={`dsFlex mglMinus8 articleAppend`}>
+                  <div className={classes.insertCont}>
+                    <p>
+                      한강지킴이 크루 규칙입니다. 필독사항!
+                      <br />
+                      1. 크루활동은 자유롭게 언제든지 가능합니다.
+                      <br />
+                      2. 자주... <span className={`gray`}>더보기</span>
+                    </p>
+                  </div>
+                  <div className={`dsFlex pddSide20 mglMinus8 articleAppend`}>
                     <div className={`listDesc`}>
                       <IcoChat />
                       <span className={`roboto gray`}>15</span>
@@ -199,17 +202,21 @@ function CrewDetail() {
                       <span className={`roboto gray`}>200</span>
                     </div>
                   </div>
+                  <button type="button" className={`btnEdit`}>
+                    <span className="hide">게시물 수정</span>
+                    <BtnEdit />
+                  </button>
                 </div>
                 {/* 일반게시글 */}
                 <div className={classes.feed}>
-                  <div className={`crewInfo`}>
+                  <div className={`crewInfo pddSide20`}>
                     <div className={`dsFlex crewProfile`}>
                       <div className={`photoBox mgr12`}>
                         <img src={profileSampleCherry} />
                       </div>
                       <div className={`detailCrewInfo`}>
                         <div>
-                          <strong className={`crewName`}>체리쨩</strong>
+                          <strong className={`crewName`}>체리2023</strong>
                         </div>
                         <div className={classes.recentInfo}>
                           <span className={classes.time}>6시간 전</span>
@@ -217,11 +224,13 @@ function CrewDetail() {
                       </div>
                     </div>
                   </div>
-                  <p className={classes.insertCont}>
-                    오늘 한강에서 달리시는 분 있을까요? 저는 6시에 갈건데
-                    시간되면 함께 달려요!
-                  </p>
-                  <div className={`dsFlex mglMinus8 articleAppend`}>
+                  <div className={classes.insertCont}>
+                    <p>
+                      오늘 한강에서 달리시는 분 있을까요? 저는 6시에 갈건데
+                      시간되면 함께 달려요!
+                    </p>
+                  </div>
+                  <div className={`dsFlex pddSide20 mglMinus8 articleAppend`}>
                     <div className={`listDesc`}>
                       <IcoChat />
                       <span className={`roboto gray`}>15</span>
@@ -237,14 +246,14 @@ function CrewDetail() {
                   </button>
                 </div>
                 <div className={classes.feed}>
-                  <div className={`crewInfo`}>
+                  <div className={`crewInfo pddSide20`}>
                     <div className={`dsFlex pdb16 crewProfile`}>
                       <div className={`photoBox mgr12`}>
                         <img src={profileSampleCherry} />
                       </div>
                       <div className={`detailCrewInfo`}>
                         <div>
-                          <strong className={`crewName`}>체리쨩</strong>
+                          <strong className={`crewName`}>체리2023</strong>
                         </div>
                         <div className={classes.recentInfo}>
                           <span className={classes.time}>6시간 전</span>
@@ -252,11 +261,16 @@ function CrewDetail() {
                       </div>
                     </div>
                   </div>
-                  <p className={classes.insertCont}>
-                    오늘 한강에서 달리시는 분 있을까요? 저는 6시에 갈건데
-                    시간되면 함께 달려요!
-                  </p>
-                  <div className={`dsFlex mglMinus8 articleAppend`}>
+                  <div className={classes.insertCont}>
+                    <img src={feedImg} />
+                    <p>
+                      안녕하세요~ 오늘은 크루와 함께 한강의 쓰레기를 담으러
+                      왔어요! 저녁에 함께 쓰레기를 주우니 날씨도 선선하고 너무
+                      즐겁더라구요...
+                      <span className={`gray`}>더보기</span>
+                    </p>
+                  </div>
+                  <div className={`dsFlex pddSide20 mglMinus8 articleAppend`}>
                     <div className={`listDesc`}>
                       <IcoChat />
                       <span className={`roboto gray`}>15</span>
@@ -271,41 +285,7 @@ function CrewDetail() {
                     <BtnEdit />
                   </button>
                 </div>
-                <div className={classes.feed}>
-                  <div className={`crewInfo`}>
-                    <div className={`dsFlex pdb16 crewProfile`}>
-                      <div className={`photoBox mgr12`}>
-                        <img src={profileSampleCherry} />
-                      </div>
-                      <div className={`detailCrewInfo`}>
-                        <div>
-                          <strong className={`crewName`}>체리쨩</strong>
-                        </div>
-                        <div className={classes.recentInfo}>
-                          <span className={classes.time}>6시간 전</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <p className={classes.insertCont}>
-                    오늘 한강에서 달리시는 분 있을까요? 저는 6시에 갈건데
-                    시간되면 함께 달려요!
-                  </p>
-                  <div className={`dsFlex mglMinus8 articleAppend`}>
-                    <div className={`listDesc`}>
-                      <IcoChat />
-                      <span className={`roboto gray`}>15</span>
-                    </div>
-                    <div className={`listDesc`}>
-                      <Heart />
-                      <span className={`roboto gray`}>200</span>
-                    </div>
-                  </div>
-                  <button type="button" className={`btnEdit`}>
-                    <span className="hide">게시물 수정</span>
-                    <BtnEdit />
-                  </button>
-                </div>
+
                 <button type="button" className={`${classes.btnWriteGreen}`}>
                   <span className={`hide`}>게시물 작성버튼</span>
                   <BtnWriteGreen />
@@ -319,7 +299,7 @@ function CrewDetail() {
             // TODO : 랭킹 컴포넌트
             currentTab === "rank" && (
               <div className={`bgGreenGradi listCont pddSide20`}>
-                <div>
+                <div className={`pdb72`}>
                   <div
                     className={`${classes.recordTitle} ${classes.white}`}
                     onClick={""}
@@ -368,7 +348,7 @@ function CrewDetail() {
                         <span className={classes.rank}>3</span>
                       </div>
                       <div className={classes.result}>
-                        <strong className={classes.userName}>체리쨩</strong>
+                        <strong className={classes.userName}>체리2023</strong>
                         <div className={`roboto tac ${classes.textValue}`}>
                           <span className={classes.num}>7.99</span>
                           <span className={classes.unit}>L</span>
