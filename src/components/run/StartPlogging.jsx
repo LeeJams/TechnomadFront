@@ -13,6 +13,19 @@ function StartPlogging() {
 
   return (
     <div id="layoutWrap">
+      {/* 헤더 */}
+      <header className={`header`}>
+        <div className={`container`}>
+          <h2 className={`headTitle`}>
+            <em className={`textStart`}>
+              <span className={`textDate`}>5월 29일</span>
+              한강지킴이 모여라!
+            </em>
+          </h2>
+        </div>
+      </header>
+
+      {/* 지도 */}
       <Map />
 
       <Record isStart={isStart} />
@@ -22,7 +35,6 @@ function StartPlogging() {
         className={`dsFlex timeAlert`}
         style={{
           zIndex: 2,
-          top: 20,
         }}
       >
         <IcoRunning />

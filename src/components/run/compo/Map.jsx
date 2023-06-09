@@ -103,9 +103,9 @@ export default function Map() {
     }
   };
   return (
-    <section className={classes.mapArea}>
+    <section className={`mapArea`}>
       {/* Map 영역 */}
-      <div className={classes.mapBox} id="map">
+      <div className={`mapBox`} id="map">
         {/* 이 위치에 넣어주세요 */}
       </div>
       <button

@@ -26,6 +26,7 @@ function Result() {
     <div id="layoutWrap">
       {/* 담깅 결과 */}
       <section className={`resultArea`}>
+        {/* 헤더 */}
         <header className={`header`}>
           <div className={`container`}>
             <div className={`titleArea`}>
@@ -51,8 +52,9 @@ function Result() {
             </div>
           </div>
         </header>
+        {/* 지도 */}
         <div className={`mapArea`}>
-          <div className={`mapBox`}></div>
+          <div id="map" className={`mapBox`}></div>
         </div>
 
         <div className={`pddSide20 pddUd20`}>
