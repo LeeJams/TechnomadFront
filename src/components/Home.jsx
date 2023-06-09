@@ -143,9 +143,7 @@ function Home() {
             {/* 홈, 크루 공통 사용되는 리스트입니다. */}
             <ul className="dsFlex listRound">
               <li>
-                <div className={`image`}>
-                  <img src={bgSample01} />
-                </div>
+                <div className={`image bgSample01`}></div>
                 <div className={`detail`}>
                   <span className={`markRoundCom type`}>CREW</span>
                   <p className={`title`}>2030 같이 쓰레기 담을 사람!</p>
@@ -162,9 +160,7 @@ function Home() {
                 </div>
               </li>
               <li>
-                <div className={`image`}>
-                  <img src={bgSample02} />
-                </div>
+                <div className={`image bgSample02`}></div>
                 <div className={`detail`}>
                   <span className={`markRoundCom type`}>챌린지</span>
                   <p className={`title`}>멍멍런! 챌린지</p>
