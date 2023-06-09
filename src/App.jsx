@@ -18,7 +18,7 @@ import Crew from "./components/view/Crew";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/TechnomadFront",
     element: <Layout />,
     loader: () => {
       if (!getCookie("token")) {
@@ -28,24 +28,24 @@ const router = createBrowserRouter([
     },
     children: [
       { index: true, element: <Home /> },
-      { path: "/crew", element: <Crew /> },
+      { path: "crew", element: <Crew /> },
 
-      { path: "/crew/join", element: <JoinCrew /> },
-      { path: "/record", element: <div>기록</div> },
-      { path: "/challenge", element: <Challenge /> },
-      { path: "/mypage", element: <MyPage /> },
+      { path: "crew/join", element: <JoinCrew /> },
+      { path: "record", element: <div>기록</div> },
+      { path: "challenge", element: <Challenge /> },
+      { path: "mypage", element: <MyPage /> },
     ],
   },
-  { path: "/run", element: <StartPlogging /> },
-  { path: "/crew/:id", element: <CrewDetail /> },
+  { path: "/TechnomadFront/run", element: <StartPlogging /> },
+  { path: "/TechnomadFront/crew/:id", element: <CrewDetail /> },
   {
-    path: "/login",
+    path: "/TechnomadFront/login",
     element: <Login />,
   },
 ]);
 
 function App() {
-  const [isSplash, setIsSplash] = useState(false);
+  const [isSplash, setIsSplash] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {

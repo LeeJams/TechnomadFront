@@ -88,7 +88,7 @@ function Home() {
             <button
               type="button"
               className={`${classes.btn}`}
-              onClick={() => navigate("/run")}
+              onClick={() => navigate("/TechnomadFront/run")}
             >
               담깅 시작
             </button>
@@ -97,7 +97,7 @@ function Home() {
       </section>
       <section
         className={`pddSide20 visualBanner`}
-        onClick={() => navigate("/challenge")}
+        onClick={() => navigate("/TechnomadFront/challenge")}
       >
         <div className={`bgArea home`}></div>
         <div className={`textWrap`}>

@@ -14,7 +14,7 @@ const Login = () => {
       // await http.post("/common/login", { accountId: id });
       // TODO : 로그인 성공시 홈으로 이동
       setCookie("id", id);
-      navigate("/");
+      navigate("/TechnomadFront");
     } catch (error) {
       console.log(error);
       alert("로그인에 실패했습니다.");

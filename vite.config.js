@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     host: true,
   },
-  // base: "/Technomad_Front/",
+  base: "/TechnomadFront/",
   build: {
     outDir: "docs",
   },

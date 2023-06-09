@@ -17,7 +17,7 @@ function Bottom() {
       <div className={classes.bottomBar}>
         <ul className={classes.menuBox}>
           <li className={classes.listMenu}>
-            <NavLink to="/crew">
+            <NavLink to="/TechnomadFront/crew">
               {({ isActive }) => (
                 <>
                   <span className={classes.menuIcon}>
@@ -36,7 +36,7 @@ function Bottom() {
             </NavLink>
           </li>
           <li className={classes.listMenu}>
-            <NavLink to="/record">
+            <NavLink to="/TechnomadFront/record">
               {({ isActive }) => (
                 <>
                   <span className={classes.menuIcon}>
@@ -55,7 +55,7 @@ function Bottom() {
             </NavLink>
           </li>
           <li className={classes.listMenu}>
-            <NavLink to="/">
+            <NavLink to="/TechnomadFront" end>
               {({ isActive }) => (
                 <>
                   <span className={classes.menuIcon}>
@@ -74,7 +74,7 @@ function Bottom() {
             </NavLink>
           </li>
           <li className={classes.listMenu}>
-            <NavLink to="/challenge">
+            <NavLink to="/TechnomadFront/challenge">
               {({ isActive }) => (
                 <>
                   <span className={classes.menuIcon}>
@@ -93,7 +93,7 @@ function Bottom() {
             </NavLink>
           </li>
           <li className={classes.listMenu}>
-            <NavLink to="/mypage">
+            <NavLink to="/TechnomadFront/mypage">
               {({ isActive }) => (
                 <>
                   <span className={classes.menuIcon}>

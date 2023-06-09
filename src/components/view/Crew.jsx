@@ -80,7 +80,7 @@ function Crew() {
               </button>
             </li>
             <li>
-              <a onClick={() => navigate("/crew/1")}>
+              <a onClick={() => navigate("/TechnomadFront/crew/1")}>
                 <div className={`bgBox fst`}>
                   <div className={`bgImg`}></div>
                 </div>
