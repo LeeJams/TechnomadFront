@@ -9,10 +9,11 @@ import BtnEdit from "../ui/BtnEdit.jsx";
 import IcoCamera from "../ui/IcoCamera.jsx";
 import IcoClose from "../ui/IcoClose.jsx";
 import { useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function Result() {
   const navigate = useNavigate();
+  const { state } = useLocation();
   const inputFile = useRef(null);
   const onFileChange = (event) => {
     const {
@@ -38,7 +39,7 @@ function Result() {
               <button
                 type="button"
                 onClick={() => {
-                  navigate("/TechnomadFront");
+                  navigate(`/TechnomadFront/${state.isCrew ? "crew/1" : ""}`);
                 }}
               >
                 <IcoClose />
@@ -75,19 +76,19 @@ function Result() {
             <li>
               <div className={`label`}>걸음</div>
               <div className={`textValue`}>
-                <span>5648</span>
+                <span>{state.walk}</span>
               </div>
             </li>
             <li>
               <div className={`label`}>거리(KM)</div>
               <div className={`textValue`}>
-                <span>3.29</span>
+                <span>{state.distance}</span>
               </div>
             </li>
             <li>
               <div className={`label`}>소요시간</div>
               <div className={`textValue`}>
-                <span>02:36</span>
+                <span>{state.timeString}</span>
               </div>
             </li>
           </ul>

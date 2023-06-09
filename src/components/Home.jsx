@@ -86,7 +86,13 @@ function Home() {
             <button
               type="button"
               className={`${classes.btn}`}
-              onClick={() => navigate("/TechnomadFront/run")}
+              onClick={() =>
+                navigate("/TechnomadFront/run", {
+                  state: {
+                    isCrew: false,
+                  },
+                })
+              }
             >
               담깅 시작
             </button>

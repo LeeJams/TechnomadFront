@@ -55,7 +55,7 @@ function Bottom() {
             </NavLink>
           </li>
           <li className={classes.listMenu}>
-            <NavLink to="/TechnomadFront" end>
+            <NavLink to="/TechnomadFront/" end>
               {({ isActive }) => (
                 <>
                   <span className={classes.menuIcon}>
