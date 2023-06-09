@@ -13,9 +13,7 @@ function StartPlogging() {
 
   return (
     <div id="layoutWrap">
-      <div className={`mapArea`}>
-        <Map />
-      </div>
+      <Map />
 
       <Record isStart={isStart} />
 
