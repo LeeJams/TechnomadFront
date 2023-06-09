@@ -9,8 +9,10 @@ import BtnEdit from "../ui/BtnEdit.jsx";
 import IcoCamera from "../ui/IcoCamera.jsx";
 import IcoClose from "../ui/IcoClose.jsx";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Result() {
+  const navigate = useNavigate();
   const inputFile = useRef(null);
   const onFileChange = (event) => {
     const {
@@ -33,7 +35,12 @@ function Result() {
               <span className={`pageName`}>담깅 결과</span>
             </div>
             <div className={classes.btnWrap}>
-              <button type="button">
+              <button
+                type="button"
+                onClick={() => {
+                  navigate("/TechnomadFront");
+                }}
+              >
                 <IcoClose />
               </button>
             </div>

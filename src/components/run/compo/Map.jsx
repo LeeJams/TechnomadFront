@@ -21,8 +21,7 @@ export default function Map() {
         navigate(-1);
       }
     };
-    // getCurLocation();
-    temp();
+    getCurLocation();
   }, [navigate]);
 
   const success = (position) => {
@@ -37,16 +36,6 @@ export default function Map() {
 
     let kakaoMap = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
     setMap(kakaoMap);
-  };
-
-  const temp = (position) => {
-    let mapContainer = document.getElementById("map"), // 지도를 표시할 div
-      mapOption = {
-        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-        level: 3, // 지도의 확대 레벨
-      };
-
-    let kakaoMap = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
   };
 
   useEffect(() => {
@@ -65,8 +54,6 @@ export default function Map() {
         });
 
         // 지도에 선을 표시합니다
-        console.log("test");
-
         polyline.setMap(map);
       }
     }, 5000);
