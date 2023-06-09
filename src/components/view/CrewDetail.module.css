@@ -1,207 +1,234 @@
-.bgGray {background-color:#F7F8FA;}
-.photoBox img{
-    max-width:100%;
-    max-height:100%;
-} 
+.bgGray {
+    background-color: #F7F8FA;
+}
 
-.crewDetailInfo{
-    width:100%;
-    height:36rem;
+.photoBox img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.crewDetailInfo {
+    width: 100%;
+    height: 36rem;
 }
 
 /* bannerBox */
-.bannerBox{
-    width:100%;
-    height:200px;
-    background:url('../../assets/images/banner_01.png') no-repeat center / cover;
-    overflow:hidden;
-}
-.crewInfo{
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:100%;
-    height:19.6rem;
-    padding:32px 20px;
-    background-color:#fff;
-    border-top-left-radius:12px;
-    border-top-right-radius:12px;
-    /* 임시 border:0.1rem solid #E1E1E1; */
-    border-bottom:0.1rem solid #e1e1e1;
+.bannerBox {
+    width: 100%;
+    height: 200px;
+    background: url('../../assets/images/banner_01.png') no-repeat center / cover;
+    overflow: hidden;
 }
 
-.introText{
-    margin-top:12px;
-    font-size:1.5rem;
+.crewInfo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 19.6rem;
+    padding: 32px 20px;
+    background-color: #fff;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    /* 임시 border:0.1rem solid #E1E1E1; */
+    border-bottom: 0.1rem solid #e1e1e1;
+}
+
+.introText {
+    margin-top: 12px;
+    font-size: 1.5rem;
 }
 
 /* 탭메뉴 */
 .tabLink {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.tabLink a{
-    flex:0 0 25%;
-    max-width:25%;
-    height:4.5rem;
-    line-height:43px;
-    color:#999;
-    font-size:1.6rem;
-    text-align:center;
-    border-bottom:0.1rem solid #E1E1E1;
+
+.tabLink a {
+    flex: 0 0 25%;
+    max-width: 25%;
+    height: 4.5rem;
+    line-height: 43px;
+    color: #999;
+    font-size: 1.6rem;
+    text-align: center;
+    border-bottom: 0.1rem solid #E1E1E1;
 }
-.tabLink a.active{
-    color:#2e2e2e;
-    border-width:0.2rem;
+
+.tabLink a.active {
+    color: #2e2e2e;
+    border-width: 0.2rem;
     border-color: #2e2e2e;
 }
 
 /* tabContent */
-.tabContent .listCont{
-    padding-bottom:90px;
-}
-.tabContent .listCont > div{
-    padding-right:20px;
-    padding-left:20px;
-}
-.recordTitle{
-    padding-top:32px;
-    margin-bottom:20px;
-}
-.recordTitle.white strong{
-    color:#fff;
-}
-.recordTitle.white svg path{
-    stroke:#fff;
+.tabContent .listCont {}
+
+.tabContent .listCont>div {
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
-.todayRanked{
-    justify-content:space-evenly;
-    align-items:last baseline;
-    width:100%;
-    height:200px;
-    margin-bottom:20px;
-    padding:24px 30px;
-    background-color:#fff;
-    box-shadow: 0px 3px 6px rgba(0,0,0, 8%);
-    border-radius:12px;
+.recordTitle {
+    padding-top: 32px;
+    margin-bottom: 20px;
 }
-.profileRanked{
-    position:relative;
-    height:6.2rem;
-    margin-bottom:10px;
+
+.recordTitle.white strong {
+    color: #fff;
 }
-.profileRanked .photoBox{
-    width:5.2rem;
-    height:5.2rem;
-    margin:0 auto;
-    border-radius:50%;
-    box-shadow: 0px 3px 6px rgba(0,0,0, 8%);
-    overflow:hidden;
+
+.recordTitle.white svg path {
+    stroke: #fff;
 }
-.profileRanked .rank{
-    position:absolute;
-    bottom:0;
-    left:50%;
-    transform:translateX(-50%);
-    width:2.2rem;
-    height:2.2rem;
-    color:#fff;
-    font-size:1.5rem;
-    line-height:20px;
-    text-align:center;
-    border-radius:50%;
+
+.todayRanked {
+    justify-content: space-evenly;
+    align-items: last baseline;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    padding: 24px 30px;
+    background-color: #fff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 8%);
+    border-radius: 12px;
 }
-.listRank.silver .rank{
-    background-color:#B1B2B2;
+
+.profileRanked {
+    position: relative;
+    height: 6.2rem;
+    margin-bottom: 10px;
 }
-.listRank.winner .rank{
-    background-color:#F5BC00;
+
+.profileRanked .photoBox {
+    width: 5.2rem;
+    height: 5.2rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 8%);
+    overflow: hidden;
 }
-.listRank.bronze .rank{
-    background-color:#987144;
+
+.profileRanked .rank {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2.2rem;
+    height: 2.2rem;
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
 }
-.result .userName{
-    display:inline-block;
-    width:100%;
-    font-size:1.4rem;
-    font-weight:400;
-    text-align:center;
+
+.listRank.silver .rank {
+    background-color: #B1B2B2;
 }
+
+.listRank.winner .rank {
+    background-color: #F5BC00;
+}
+
+.listRank.bronze .rank {
+    background-color: #987144;
+}
+
+.result .userName {
+    display: inline-block;
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
+}
+
 .result .textValue {
-    color:#1EC41E;
-}
-.result .textValue .num{
-    font-size:1.6rem;
-    font-weight:600;
-}
-.result .textValue .unit{
-    font-size:1.2rem;
-    font-weight:400;
+    color: #1EC41E;
 }
 
-.listRank.winner{
-    margin-right:26px;
-    margin-left:26px;
+.result .textValue .num {
+    font-size: 1.6rem;
+    font-weight: 600;
 }
-.listRank.winner .profileRanked{
-    height:10rem;
+
+.result .textValue .unit {
+    font-size: 1.2rem;
+    font-weight: 400;
 }
-.listRank.winner .photoBox{
-    width:8.8rem;
-    height:8.8rem;
+
+.listRank.winner {
+    margin-right: 26px;
+    margin-left: 26px;
 }
-.listRank.winner .profileRanked .rank{
-    width:2.8rem;
-    height:2.8rem;
-    line-height:26px;
+
+.listRank.winner .profileRanked {
+    height: 10rem;
 }
-.recordTitle strong{
-    font-size:2.2rem;
-    font-weight:500;
+
+.listRank.winner .photoBox {
+    width: 8.8rem;
+    height: 8.8rem;
 }
-.recordTitle .icoArrow{
-    display:inline-block;
-    margin-left:20px;
+
+.listRank.winner .profileRanked .rank {
+    width: 2.8rem;
+    height: 2.8rem;
+    line-height: 26px;
 }
-.recordTitle .icoArrow svg{
-    transform:rotate(90deg);
+
+.recordTitle strong {
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.recordTitle .icoArrow {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.recordTitle .icoArrow svg {
+    transform: rotate(90deg);
 }
 
 /* feed */
-.feed{
-    position:relative;
-    padding-top:32px;
-    padding-bottom:32px;
-    border-bottom:0.1rem solid #E1E1E1;
+.feed {
+    position: relative;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-bottom: 0.1rem solid #E1E1E1;
 }
-.feed .notice{
-    display:inline-block;
-    height:2.5rem;
-    line-height:23px;
-    margin-bottom:12px;
-    background-color:#1EC41E;
-    color:#fff;
-    font-size:1.5rem;
-    border-color:#1EC41E;
+
+.feed .notice {
+    display: inline-block;
+    height: 2.5rem;
+    line-height: 23px;
+    margin-bottom: 12px;
+    background-color: #1EC41E;
+    color: #fff;
+    font-size: 1.5rem;
+    border-color: #1EC41E;
 }
-.feed .recentInfo .time{
-    color:#999;
-    font-size:1.2rem;
+
+.feed .recentInfo .time {
+    color: #999;
+    font-size: 1.2rem;
 }
-.feed .insertCont{
-    margin-bottom:16px;
-    font-size:1.5rem;
+
+.feed .insertCont {
+    margin-bottom: 16px;
+    font-size: 1.5rem;
 }
 
 /* btnWrap */
 .btnWrap {
-    justify-content:center;
-}
-.btn{
-    width:100%;
-    font-size:1.8rem;
-    font-weight:500;
+    justify-content: center;
 }
 
+.btn {
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 500;
+}

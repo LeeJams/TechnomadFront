@@ -37,8 +37,8 @@ function Home() {
     };
 
     try {
-      getMyPloggingHistory();
-      getMyCrewList();
+      // getMyPloggingHistory();
+      // getMyCrewList();
     } catch (error) {
       console.log(error);
     }
@@ -59,7 +59,7 @@ function Home() {
             </div>
             <p className={`roboto tac ${classes.currentState}`}>
               <span className={`green`}>
-                {myPloggingHistory.targetTrashLiter || 0}
+                {myPloggingHistory.targetTrashLiter || 75}
               </span>
               /<span className={`black`}>100L</span>
             </p>
@@ -68,19 +68,19 @@ function Home() {
             <div>
               <div className={`tal ${classes.textValue}`}>
                 <span className={`roboto black ${classes.num}`}>
-                  {myPloggingHistory.todayAllTrashLiter || 0}
+                  {myPloggingHistory.todayAllTrashLiter || 20}
                 </span>
                 <span className={`roboto gray ${classes.unit}`}>L</span>
               </div>
               <div className={`tal ${classes.textValue}`}>
                 <span className={`roboto black ${classes.num}`}>
-                  {myPloggingHistory.todayAllWalkingCount || 0}
+                  {myPloggingHistory.todayAllWalkingCount || 5137}
                 </span>
                 <span className={`gray ${classes.unit}`}>걸음</span>
               </div>
               <div className={`tal ${classes.textValue}`}>
                 <span className={`roboto black ${classes.num}`}>
-                  {myPloggingHistory.todayAllExerciseDistance || 0}
+                  {myPloggingHistory.todayAllExerciseDistance || 3.51}
                 </span>
                 <span className={`gray ${classes.unit}`}>거리(km)</span>
               </div>

@@ -11,8 +11,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-fade";
+import { useNavigate } from "react-router-dom";
 
 function Crew() {
+  const navigate = useNavigate();
+
   return (
     <>
       <section className={`slideBanner`}>
@@ -77,11 +80,11 @@ function Crew() {
               </button>
             </li>
             <li>
-              <a href="#">
+              <a onClick={() => navigate("/crew/1")}>
                 <div className={`bgBox fst`}>
                   <div className={`bgImg`}></div>
                 </div>
-                <span className={`listName`}>한강런!!</span>
+                <span className={`listName`}>한강지킴이 모여라!</span>
               </a>
             </li>
             <li>

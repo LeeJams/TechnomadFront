@@ -4,7 +4,8 @@ import IcoCrew from "../ui/IcoCrew.jsx";
 import IcoHome from "../ui/IcoHome.jsx";
 import IcoChallenge from "../ui/IcoChallenge.jsx";
 import IcoPerson from "../ui/IcoPerson.jsx";
-import { Link, NavLink } from "react-router-dom";
+import IcoLine from "../ui/IcoLine.jsx";
+import { NavLink } from "react-router-dom";
 
 function Bottom() {
   const selectColor = (active) => {
