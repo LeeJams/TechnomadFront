@@ -14,6 +14,7 @@ import MyPage from "./components/view/MyPage";
 import Challenge from "./components/view/Challenge";
 import Crew from "./components/view/Crew";
 import Result from "./components/run/Result";
+import RecordLanding from "./components/view/RecordLanding";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: "crew", element: <Crew /> },
 
-      { path: "record", element: <div>기록</div> },
+      { path: "record", element: <RecordLanding /> },
       { path: "challenge", element: <Challenge /> },
       { path: "mypage", element: <MyPage /> },
     ],

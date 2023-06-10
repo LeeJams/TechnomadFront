@@ -1,10 +1,10 @@
 import classes from "./Bottom.module.css";
-import icoRecord from "../../assets/images/icones/ico_record.png";
+// import icoRecord from "../../assets/images/icones/ico_record.png";
 import IcoCrew from "../ui/IcoCrew.jsx";
+import IcoRecord from "../ui/IcoRecord.jsx";
 import IcoHome from "../ui/IcoHome.jsx";
 import IcoChallenge from "../ui/IcoChallenge.jsx";
 import IcoPerson from "../ui/IcoPerson.jsx";
-import IcoLine from "../ui/IcoLine.jsx";
 import { NavLink } from "react-router-dom";
 
 function Bottom() {
@@ -40,7 +40,8 @@ function Bottom() {
               {({ isActive }) => (
                 <>
                   <span className={classes.menuIcon}>
-                    <img src={icoRecord} />
+                    {/* <img src={icoRecord} /> */}
+                    <IcoRecord />
                   </span>
                   <span
                     className={classes.menuName}
