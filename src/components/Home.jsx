@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import http from "./utils/http";
 import { getCookie } from "./utils/cookies";
 import { useNavigate } from "react-router-dom";
+import Header from "./layouts/Header";
 
 function Home() {
   const navigate = useNavigate();
@@ -45,6 +46,7 @@ function Home() {
   return (
     <>
       {/* 오늘의 담깅 */}
+      <Header />
       <section className={`pddSide20 ${classes.todayRecord}`}>
         <h2 className={`h2Title`}>
           오늘도 담깅!
