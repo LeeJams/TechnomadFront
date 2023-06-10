@@ -34,7 +34,13 @@
     margin:0 auto;
 }
 .listMenu .menuIcon *{
-    max-width:100%;
+    width:100%;
+}
+.listMenu.icoMy .menuIcon svg{
+    width:44px;
+    height:44px;
+    margin-left:-5px;
+    margin-top:-5px;
 }
 .listMenu .menuName{
     color:#999;

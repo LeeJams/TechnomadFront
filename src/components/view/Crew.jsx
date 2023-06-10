@@ -87,7 +87,7 @@ function Crew() {
             <IcoArrow />
           </span>
         </h2>
-        <div className="horizontalBox pddSide20">
+        <div className="horizontalBox">
           <ul className={`listHoriRound`}>
             <li className={`add`}>
               <button type="button" className={`addNew`}>
@@ -119,26 +119,18 @@ function Crew() {
                 <span className={`listName`}>한강코스 도그런</span>
               </a>
             </li>
-            <li>
-              <a href="#">
-                <div className={`bgBox for`}>
-                  <div className={`bgImg`}></div>
-                </div>
-                <span className={`listName`}>한강코스 도그런</span>
-              </a>
-            </li>
           </ul>
         </div>
       </section>
       {/* HOT크루 */}
-      <section className={`pddSide20 pdb72 ${classes.hotCrew}`}>
-        <h2 className={`h2Title dsFlex`}>
+      <section className={`pdb72 ${classes.hotCrew}`}>
+        <h2 className={`h2Title dsFlex pddSide20`}>
           HOT 크루
           <span>
             <IcoArrow />
           </span>
         </h2>
-        <div className={`tabLink mgb16`}>
+        <div className={`tabLink mgb16 pddSide20`}>
           <button className={`markRoundCom active`}>#서울</button>
           <button className={`markRoundCom`}>#한강</button>
           <button className={`markRoundCom`}>#관악구</button>
@@ -147,7 +139,7 @@ function Crew() {
           <button className={`markRoundCom`}>#도그런</button>
           <button className={`markRoundCom`}>#퇴근길</button>
         </div>
-        <div className={`tabContent`}>
+        <div className={`tabContent pddSide20`}>
           <div>
             {/* 홈, 크루 공통 사용되는 리스트입니다. */}
             <ul className="dsFlex listRound">

@@ -92,7 +92,7 @@ function Bottom() {
               )}
             </NavLink>
           </li>
-          <li className={classes.listMenu}>
+          <li className={`${classes.listMenu} ${classes.icoMy}`}>
             <NavLink to="/TechnomadFront/mypage">
               {({ isActive }) => (
                 <>

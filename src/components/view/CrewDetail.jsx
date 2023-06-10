@@ -3,6 +3,7 @@ import classes from "./CrewDetail.module.css";
 import profileSampleDog from "../../assets/images/profile_sample_01.png";
 import profileSampleCherry from "../../assets/images/profile_sample_cherry.png";
 import profileSampleHangang from "../../assets/images/profile_sample_Hangang.png";
+import profileSampleWoman from "../../assets/images/profile_sample_woman.png";
 import feedImg from "../../assets/images/banner_2.png";
 import IcoArrow from "../ui/IcoArrow.jsx";
 import IcoPerson from "../ui/IcoPerson.jsx";
@@ -379,12 +380,12 @@ function CrewDetail() {
                     <div className={`${classes.listRank} ${classes.bronze}`}>
                       <div className={classes.profileRanked}>
                         <div className={`${classes.photoBox}`}>
-                          <img src={profileSampleCherry} />
+                          <img src={profileSampleWoman} />
                         </div>
                         <span className={classes.rank}>3</span>
                       </div>
                       <div className={classes.result}>
-                        <strong className={classes.userName}>체리2023</strong>
+                        <strong className={classes.userName}>레몬소다</strong>
                         <div className={`roboto tac ${classes.textValue}`}>
                           <span className={classes.num}>7.99</span>
                           <span className={classes.unit}>L</span>

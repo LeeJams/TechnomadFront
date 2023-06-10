@@ -489,6 +489,7 @@ caption>span {
 
 .h2Title.dsFlex {
     justify-content: space-between;
+    padding-right:8px !important;
 }
 
 .login {
@@ -766,6 +767,7 @@ caption>span {
 
 .visualBanner .textWrap .desc {
     margin-top: 2px;
+    color:#2e2e2e;
     font-size: 1.5rem;
     font-weight: 400;
 }
@@ -876,11 +878,11 @@ caption>span {
 /* 가로스크롤 라운드박스 */
 .horizontalBox {
     padding-bottom: 32px;
+    padding-left:20px;
 }
 
 .horizontalBox .listHoriRound {
     width: 100%;
-    padding-bottom: 3px;
     text-align: left;
     overflow-x: auto;
     white-space: nowrap;
@@ -931,9 +933,9 @@ caption>span {
     position: relative;
     width: 8.5rem;
     height: 8.2rem;
-    background-color: rgba(0, 0, 0, 80%);
     border-radius: 12px;
     z-index: 1;
+    overflow:hidden;
 }
 
 .listHoriRound .bgBox .bgImg {
@@ -1142,6 +1144,14 @@ caption>span {
     background-image: url("./assets/images/bgSample06.png");
     background-position: center;
 }
+.listRound .bgSample07 {
+    background-image: url("./assets/images/bgSample07.png");
+    /* background-position: center; */
+}
+.listRound .bgSample08 {
+    background-image: url("./assets/images/bgSample08.png");
+    /* background-position: center; */
+}
 
 .listRound .detail {
     width: 100%;
@@ -1166,6 +1176,9 @@ caption>span {
 .tagBox {
     margin-bottom: 12px;
 }
+.crewIntroTitle + .tagBox {
+    margin-bottom: 2px;
+}
 
 .tagBox .tags {
     color: #999;
@@ -1180,6 +1193,9 @@ caption>span {
 }
 
 /* articleAppend */
+.articleAppend {
+    margin-left:-3px;
+}
 .articleAppend .listDesc {
     display: flex;
     justify-content: flex-start;

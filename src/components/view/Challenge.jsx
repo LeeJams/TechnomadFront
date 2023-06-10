@@ -84,7 +84,7 @@ function Challenge() {
             <IcoArrow />
           </span>
         </h2>
-        <div className="horizontalBox pddSide20">
+        <div className="horizontalBox">
           <ul className={`listHoriRound`}>
             <li className={`add`}>
               <button type="button" className={`addNew`}>
@@ -209,9 +209,9 @@ function Challenge() {
               </div>
             </li>
             <li>
-              <div className={`image bgSample05`}></div>
+              <div className={`image bgSample07`}></div>
               <div className={`detail`}>
-                <p className={`title`}>담배꽁초 줍기 마라톤</p>
+                <p className={`title`}>하루 0.5리터 담기</p>
                 <div className={`dsFlex mglMinus8 articleAppend`}>
                   <div className={`listDesc`}>
                     <IcoPerson />
@@ -225,9 +225,9 @@ function Challenge() {
               </div>
             </li>
             <li>
-              <div className={`image bgSample02`}></div>
+              <div className={`image bgSample08`}></div>
               <div className={`detail`}>
-                <p className={`title`}>하루 0.5리터 담기</p>
+                <p className={`title`}>담배꽁초 줍기 마라톤</p>
                 <div className={`dsFlex mglMinus8 articleAppend`}>
                   <div className={`listDesc`}>
                     <IcoPerson />
