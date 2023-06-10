@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       { path: "mypage", element: <MyPage /> },
     ],
   },
-  { path: "crew/join", element: <JoinCrew /> },
+  { path: "/TechnomadFront/crew/join", element: <JoinCrew /> },
   { path: "/TechnomadFront/run", element: <StartPlogging /> },
   { path: "/TechnomadFront/result", element: <Result /> },
   { path: "/TechnomadFront/crew/:id", element: <CrewDetail /> },
