@@ -63,8 +63,17 @@
     border-color: #2e2e2e;
 }
 
+.recordArea .tabLink {
+    border-top:0.1rem solid #E1E1E1;
+}
+.recordArea .tabLink a{ 
+    max-width:50%;
+    flex:0 0 50%;
+}
+
 /* tabContent */
 .recordTitle {
+    position:relative;
     padding-top: 32px;
     margin-bottom: 20px;
 }
