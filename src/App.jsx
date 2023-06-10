@@ -7,8 +7,6 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Layout from "./components/layouts/Layout";
-import Splash from "./components/layouts/Splash";
-import { useEffect, useState } from "react";
 import Login from "./components/view/Login";
 import { getCookie } from "./components/utils/cookies";
 import StartPlogging from "./components/run/StartPlogging";
@@ -47,15 +45,7 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  const [isSplash, setIsSplash] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsSplash(false);
-    }, 1000);
-  }, []);
-
-  return isSplash ? <Splash /> : <RouterProvider router={router} />;
+  return <RouterProvider router={router} />;
 }
 
 export default App;
