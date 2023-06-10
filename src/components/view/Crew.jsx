@@ -151,7 +151,7 @@ function Crew() {
           <div>
             {/* 홈, 크루 공통 사용되는 리스트입니다. */}
             <ul className="dsFlex listRound">
-              <li>
+              <li onClick={() => navigate("/TechnomadFront/crew/join")}>
                 <div className={`image bgSample01`}></div>
                 <div className={`detail`}>
                   <span className={`markRoundCom type`}>CREW</span>
@@ -168,7 +168,7 @@ function Crew() {
                   </div>
                 </div>
               </li>
-              <li>
+              <li onClick={() => navigate("/TechnomadFront/crew/join")}>
                 <div className={`image bgSample04`}></div>
                 <div className={`detail`}>
                   <span className={`markRoundCom type`}>챌린지</span>

@@ -52,7 +52,12 @@ function CrewDetail() {
       <header className={`header`}>
         <div className={`container`}>
           <h2 className={`titleArea`}>
-            <button type="button">
+            <button
+              type="button"
+              onClick={() => {
+                navigate("/TechnomadFront/crew");
+              }}
+            >
               <BtnBackpage />
             </button>
             <span className={`pageName roboto`}>CREW</span>

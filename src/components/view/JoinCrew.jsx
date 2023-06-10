@@ -37,7 +37,7 @@ function JoinCrew() {
   };
 
   return (
-    <>
+    <div id="layoutWrap">
       <section className={classes.joinCrew}>
         {/* 배너 */}
         <div className={classes.bannerBox}></div>
@@ -76,12 +76,16 @@ function JoinCrew() {
             </span>
             <span className={classes.num}>600</span>
           </button>
-          <button type="button" className={`btnCommon ${classes.btn}`}>
+          <button
+            type="button"
+            className={`btnCommon ${classes.btn}`}
+            onClick={() => navigate("/TechnomadFront/crew/1")}
+          >
             참여하기
           </button>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 

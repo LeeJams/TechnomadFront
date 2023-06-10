@@ -31,12 +31,12 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: "crew", element: <Crew /> },
 
-      { path: "crew/join", element: <JoinCrew /> },
       { path: "record", element: <div>기록</div> },
       { path: "challenge", element: <Challenge /> },
       { path: "mypage", element: <MyPage /> },
     ],
   },
+  { path: "/TechnomadFront/crew/join", element: <JoinCrew /> },
   { path: "/TechnomadFront/run", element: <StartPlogging /> },
   { path: "/TechnomadFront/result", element: <Result /> },
   { path: "/TechnomadFront/crew/:id", element: <CrewDetail /> },
