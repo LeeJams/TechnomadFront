@@ -64,15 +64,16 @@ export default function Record({ isStart, isCrew }) {
           type="button"
           className={`btnCircle`}
           onClick={() => {
-            console.log("일시정지");
-            navigate("/TechnomadFront/result", {
-              state: {
-                isCrew,
-                timeString,
-                walk,
-                distance,
-              },
-            });
+            if (confirm("플로깅을 종료하시겠습니까?")) {
+              navigate("/TechnomadFront/result", {
+                state: {
+                  isCrew,
+                  timeString,
+                  walk,
+                  distance,
+                },
+              });
+            }
           }}
         >
           <span className="hide">일시정지</span>
