@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import BtnStop from "../../ui/BtnStop.jsx";
 import classes from "../StartPlogging.module.css";
-import { useNavigate } from "react-router-dom";
 
-export default function Record({ isStart, isCrew }) {
-  const navigate = useNavigate();
+export default function Record({ isStart, endRun, isFinish }) {
   const [time, setTime] = useState(0);
   const [walk, setWalk] = useState(0);
   const [distance, setDistance] = useState(0);
@@ -27,13 +25,23 @@ export default function Record({ isStart, isCrew }) {
         });
       }, 13000);
 
+      if (isFinish) {
+        clearInterval(timer);
+        clearInterval(walk);
+        clearInterval(distance);
+      }
+
       return () => {
         clearInterval(timer);
         clearInterval(walk);
         clearInterval(distance);
       };
     }
-  }, [isStart]);
+  }, [isStart, isFinish]);
+
+  const finish = () => {
+    endRun({ time: timeString, walk, distance });
+  };
 
   let hours = Math.floor(time / 3600);
   let minutes = Math.floor((time % 3600) / 60);
@@ -60,22 +68,7 @@ export default function Record({ isStart, isCrew }) {
         </li>
       </ul>
       <div className={`dsFlex btnBox`}>
-        <button
-          type="button"
-          className={`btnCircle`}
-          onClick={() => {
-            if (confirm("플로깅을 종료하시겠습니까?")) {
-              navigate("/TechnomadFront/result", {
-                state: {
-                  isCrew,
-                  timeString,
-                  walk,
-                  distance,
-                },
-              });
-            }
-          }}
-        >
+        <button type="button" className={`btnCircle`} onClick={finish}>
           <span className="hide">일시정지</span>
           <BtnStop />
         </button>
