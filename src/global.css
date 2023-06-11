@@ -1136,6 +1136,74 @@ caption>span {
     display:none;
 }
 
+/* calendar */
+.RecordCalendar {
+    position:relative;
+    width:100%;
+    height:16rem;
+    margin-bottom:16px;
+    background-color:#fff;
+}
+.RecordCalendar .curMonth {
+    display:block;
+    margin-bottom:30px;
+    font-size:2rem;
+    font-weight:500;
+    text-align:center;
+}
+.RecordCalendar .calendarBox {
+    width:100%;
+    margin-top:30px;
+}
+.calendarBox ul {
+    justify-content:space-evenly;
+}
+.calendarBox ul li {
+    flex:0 0 13%;
+    font-family:'Roboto';
+    text-align:center;
+}
+.calendarBox .dayOfWeek li{
+    color:#B2B2B2;
+    font-size:1.2rem;
+    font-weight:500;
+}
+.calendarBox .date li{
+    width:4.4rem;
+    height:4.4rem;
+    line-height:44px;
+    color:#2e2e2e;
+    font-size:1.4rem;
+    font-weight:400;
+}
+.calendarBox .date li.today .mark{
+    display:block;
+    width:3.4rem;
+    height:3.4rem;
+    margin:5px auto;
+    line-height:34px;
+    color:#fff;
+    background-color: #1EC41E;
+    border-radius: 50%;
+}
+
+.RecordCalendar .btnDateShow{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:32px;
+    box-shadow:0px 4px 6px rgba(0, 0, 0, 16%);
+    border-bottom-left-radius:12px;
+    border-bottom-right-radius:12px;
+}
+.RecordCalendar .btnDateShow svg {
+    width:2.5rem;
+    height:2.5rem;
+    transform:rotate(90deg);
+    margin-top:4px;
+}
+
 /* mark */
 .markRoundCom {
     height: 2.3rem;

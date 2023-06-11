@@ -1,17 +1,6 @@
 // import;
 import classes from "./CrewDetail.module.css";
-import profileSampleDog from "../../assets/images/profile_sample_01.png";
-import profileSampleCherry from "../../assets/images/profile_sample_cherry.png";
-import profileSampleHangang from "../../assets/images/profile_sample_Hangang.png";
-import profileSampleWoman from "../../assets/images/profile_sample_woman.png";
-import feedImg from "../../assets/images/banner_2.png";
 import IcoArrow from "../ui/IcoArrow.jsx";
-import IcoPerson from "../ui/IcoPerson.jsx";
-import IcoChat from "../ui/IcoChat.jsx";
-import Heart from "../ui/Heart.jsx";
-import BtnEdit from "../ui/BtnEdit.jsx";
-import BtnWriteGreen from "../ui/BtnWriteGreen.jsx";
-import BtnBackpage from "../ui/BtnBackpage.jsx";
 import BtnShare from "../ui/BtnShare.jsx";
 
 import { useEffect, useState } from "react";
@@ -61,9 +50,37 @@ function RecordLanding() {
         </div>
       </header>
       {/* 달력 */}
-      <section className={classes.RecordCalendar}></section>
+      <section className={`RecordCalendar`}>
+        <strong className={`curMonth`}>2023년 6월</strong>
+        <div className="calendarBox pddSide20">
+          <ul className={`dayOfWeek dsFlex`}>
+            <li>Sun</li>
+            <li>Mon</li>
+            <li>Tue</li>
+            <li>Wed</li>
+            <li>Thu</li>
+            <li>Fri</li>
+            <li>Sat</li>
+          </ul>
+          <ul className="date Weekly dsFlex">
+            <li className={`today`}>
+              <span className={`mark`}>11</span>
+            </li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+          </ul>
+        </div>
+        <button type="button" className={`btnDateShow`}>
+          <span className={`hide`}>날짜 더보기</span>
+          <IcoArrow />
+        </button>
+      </section>
 
-      {/* 탭메뉴 및 컨텐츠 */}
+      {/* 오늘활동 및 탭메뉴*/}
       <section className={classes.recordArea}>
         <div className="todayRecord pddSide20 pdb32">
           <h2 className={`h2Title`}>오늘 활동</h2>
@@ -144,7 +161,7 @@ function RecordLanding() {
                         <span className={`resultText`}>
                           <span className={`roboto`}>12.300</span>걸음
                         </span>
-                        <span className={`resultText`}>5L</span>
+                        <span className={`resultText roboto`}>5L</span>
                         <span className={`resultText roboto`}>18:01~19:50</span>
                       </div>
                     </li>
@@ -163,10 +180,10 @@ function RecordLanding() {
                       </div>
                       <div className={`result`}>
                         <span className={`resultText`}>
-                          <span className={`roboto`}>86.500</span>걸음
+                          <span className={`roboto`}>8.682</span>걸음
                         </span>
-                        <span className={`resultText`}>5L</span>
-                        <span className={`resultText roboto`}>09:00~10:00</span>
+                        <span className={`resultText roboto`}>10L</span>
+                        <span className={`resultText roboto`}>06:00~06:30</span>
                       </div>
                     </li>
                   </ul>
