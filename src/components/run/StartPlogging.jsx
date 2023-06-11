@@ -4,15 +4,25 @@ import IcoRunning from "../ui/IcoRunning.jsx";
 import IcoPincers from "../ui/IcoPincers.jsx";
 import IcoBag from "../ui/IcoBag.jsx";
 import IcoClose from "../ui/IcoClose.jsx";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Map from "./compo/Map";
 import Record from "./compo/Record";
 import { useLocation } from "react-router-dom";
+import PopScan from "./PopScan";
 
 function StartPlogging() {
   const [isStart, setIsStart] = useState(false);
   const { state } = useLocation();
   const [crewNum, setCrewNum] = useState(0);
+  const [isFinish, setIsFinish] = useState(false);
+  const [floggingInfo, setFloggingInfo] = useState({
+    isCrew: false,
+    time: 0,
+    walk: 0,
+    distance: 0,
+    startTime: new Date(),
+  });
+  const childComponentRef = useRef();
 
   useEffect(() => {
     if (state.isCrew) {
@@ -31,8 +41,21 @@ function StartPlogging() {
     }
   }, [crewNum, state.isCrew]);
 
+  const endRun = (state) => {
+    if (confirm("플로깅을 종료하시겠습니까?")) {
+      setIsFinish(true);
+      setFloggingInfo((prev) => ({
+        ...prev,
+        ...state,
+        endTime: new Date(),
+        linePath: childComponentRef.current.getLinePath(),
+      }));
+    }
+  };
+
   return (
     <div id="layoutWrap">
+      {isFinish && <PopScan floggingInfo={floggingInfo} />}
       {/* 헤더 */}
       <header className={`header`}>
         <div className={`container`}>
@@ -46,9 +69,9 @@ function StartPlogging() {
       </header>
 
       {/* 지도 */}
-      <Map />
+      <Map ref={childComponentRef} />
 
-      <Record isStart={isStart} isCrew={state.isCrew} />
+      <Record isStart={isStart} endRun={endRun} isFinish={isFinish} />
 
       {/* time Alert 팝업 */}
       {state.isCrew && (

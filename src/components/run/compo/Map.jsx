@@ -1,13 +1,22 @@
-import { useEffect, useState } from "react";
+import { forwardRef, useEffect, useImperativeHandle, useState } from "react";
 import classes from "../StartPlogging.module.css";
 import { useNavigate } from "react-router-dom";
-const { kakao } = window;
 import IcoCompass from "../../ui/IcoCompass.jsx";
+const { kakao } = window;
 
-export default function Map() {
+const Map = forwardRef((props, ref) => {
   const navigate = useNavigate();
   const [map, setMap] = useState(null);
-  const [position, setPosition] = useState([]); //
+  const [position, setPosition] = useState([]);
+
+  useImperativeHandle(ref, () => ({
+    // 부모 컴포넌트에서 사용할 함수를 선언
+    getLinePath,
+  }));
+
+  const getLinePath = () => {
+    return position;
+  };
 
   useEffect(() => {
     const getCurLocation = () => {
@@ -89,6 +98,7 @@ export default function Map() {
       });
     }
   };
+
   return (
     <section className={`mapArea`}>
       {/* Map 영역 */}
@@ -105,4 +115,7 @@ export default function Map() {
       </button>
     </section>
   );
-}
+});
+Map.displayName = "Map";
+
+export default Map;

@@ -8,8 +8,9 @@ import IcoSprout from "../ui/IcoSprout.jsx";
 import BtnEdit from "../ui/BtnEdit.jsx";
 import IcoCamera from "../ui/IcoCamera.jsx";
 import IcoClose from "../ui/IcoClose.jsx";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+const { kakao } = window;
 
 function Result() {
   const navigate = useNavigate();
@@ -24,6 +25,50 @@ function Result() {
   const onFileClick = () => {
     inputFile.current.click();
   };
+  console.log(state);
+  const preview = URL.createObjectURL(state.file);
+  useEffect(() => {
+    var linePath = state.linePath.map((item) => {
+      return new kakao.maps.LatLng(item.Ma, item.La);
+    });
+
+    let mapContainer = document.getElementById("map"), // 지도를 표시할 div
+      mapOption = {
+        center: linePath[Math.floor(linePath.length / 2)],
+        level: 3, // 지도의 확대 레벨
+      };
+
+    let map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+    // 선을 구성하는 좌표 배열입니다. 이 좌표들을 이어서 선을 표시합니다
+
+    // 지도에 표시할 선을 생성합니다
+    var polyline = new kakao.maps.Polyline({
+      path: linePath, // 선을 구성하는 좌표배열 입니다
+      strokeWeight: 5, // 선의 두께 입니다
+      strokeColor: "#FFAE00", // 선의 색깔입니다
+      strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+      strokeStyle: "solid", // 선의 스타일입니다
+    });
+
+    // 지도에 선을 표시합니다
+    polyline.setMap(map);
+  }, [state.linePath]);
+
+  const startTime =
+    state.startTime.getFullYear() +
+    "." +
+    (state.startTime.getMonth() + 1).toString().padStart(2, "0") +
+    "." +
+    state.startTime.getDate().toString().padStart(2, "0") +
+    " " +
+    state.startTime.getHours().toString().padStart(2, "0") +
+    ":" +
+    state.startTime.getMinutes().toString().padStart(2, "0");
+
+  const endTime =
+    state.endTime.getHours().toString().padStart(2, "0") +
+    ":" +
+    state.endTime.getMinutes().toString().padStart(2, "0");
 
   return (
     <div id="layoutWrap">
@@ -50,7 +95,9 @@ function Result() {
             <div className={`titleArea`}>
               <span className={`pageName sub`}>
                 기록
-                <em>2023.06.09&nbsp;13:00-14:23</em>
+                <em>
+                  {startTime}-{endTime}
+                </em>
               </span>
             </div>
             <div className={`btnWrap`}>
@@ -88,7 +135,7 @@ function Result() {
             <li>
               <div className={`label`}>소요시간</div>
               <div className={`textValue`}>
-                <span>{state.timeString}</span>
+                <span>{state.time}</span>
               </div>
             </li>
           </ul>
@@ -115,7 +162,7 @@ function Result() {
             />
           </h2>
           <div className="uploaded">
-            <img src={confirmSample01} />
+            <img src={preview} />
           </div>
         </div>
         <div className={`write`}>

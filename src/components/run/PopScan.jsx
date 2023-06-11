@@ -2,8 +2,32 @@
 import IcoFlash from "../ui/IcoFlash.jsx";
 import IcoLighter from "../ui/IcoLighter.jsx";
 import IcoPicture from "../../assets/images/ico_picture.png";
+import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-function PopScan() {
+function PopScan({ floggingInfo }) {
+  const navigate = useNavigate();
+  const [file, setFile] = useState(null);
+  const inputFile = useRef(null);
+  const onFileChange = (event) => {
+    const {
+      target: { files },
+    } = event;
+    setFile(files[0]);
+    console.log(files);
+  };
+  const onFileClick = () => {
+    inputFile.current.click();
+  };
+
+  useEffect(() => {
+    if (file) {
+      navigate(`/TechnomadFront/result`, {
+        state: { file, ...floggingInfo },
+      });
+    }
+  }, [file, floggingInfo, navigate]);
+
   return (
     <>
       {/* 인증촬영 팝업 */}
@@ -42,7 +66,19 @@ function PopScan() {
                   <button type="button" className={`btnCommon gray`}>
                     돌아가기
                   </button>
-                  <button type="button" className={`btnCommon`}>
+                  <input
+                    style={{ display: "none" }}
+                    ref={inputFile}
+                    type="file"
+                    accept="image/*"
+                    capture="camera"
+                    onChange={onFileChange}
+                  />
+                  <button
+                    type="button"
+                    className={`btnCommon`}
+                    onClick={onFileClick}
+                  >
                     인증 촬영
                   </button>
                 </div>
