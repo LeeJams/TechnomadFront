@@ -29,7 +29,7 @@ function Result() {
   const preview = URL.createObjectURL(state.file);
   useEffect(() => {
     var linePath = state.linePath.map((item) => {
-      return new kakao.maps.LatLng(item.La, item.Ma);
+      return new kakao.maps.LatLng(item.Ma, item.La);
     });
 
     let mapContainer = document.getElementById("map"), // 지도를 표시할 div
