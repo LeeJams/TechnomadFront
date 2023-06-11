@@ -1,7 +1,6 @@
 import classes from "./Bottom.module.css";
 // import icoRecord from "../../assets/images/icones/ico_record.png";
 import IcoCrew from "../ui/IcoCrew.jsx";
-import IcoRecord from "../ui/IcoRecord.jsx";
 import IcoHome from "../ui/IcoHome.jsx";
 import IcoChallenge from "../ui/IcoChallenge.jsx";
 import IcoPerson from "../ui/IcoPerson.jsx";
@@ -37,22 +36,19 @@ function Bottom() {
           </li>
           <li className={classes.listMenu}>
             <NavLink to="/TechnomadFront/record">
-              {({ isActive }) => (
-                <>
-                  <span className={classes.menuIcon}>
-                    {/* <img src={icoRecord} /> */}
-                    <IcoRecord />
-                  </span>
-                  <span
-                    className={classes.menuName}
-                    style={{
-                      color: selectColor(isActive),
-                    }}
-                  >
-                    기록
-                  </span>
-                </>
-              )}
+              <>
+                <span
+                  className={`${classes.menuIcon} ${classes.recordBg} ${classes.active}`}
+                ></span>
+                <span
+                  className={classes.menuName}
+                  // style={{
+                  //   color: selectColor(),
+                  // }}
+                >
+                  기록
+                </span>
+              </>
             </NavLink>
           </li>
           <li className={classes.listMenu}>

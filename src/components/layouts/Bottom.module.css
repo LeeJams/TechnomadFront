@@ -33,6 +33,12 @@
     height:3.2rem;
     margin:0 auto;
 }
+.listMenu .recordBg{
+    background:url("../../assets/images/icones/icoRecordbg.png") no-repeat 0 0 / 32px;
+}
+.listMenu .recordBg.active{
+    background-position: 0 -40px;
+}
 .listMenu .menuIcon *{
     width:100%;
 }
