@@ -94,22 +94,20 @@ function Bottom() {
             </NavLink>
           </li>
           <li className={`${classes.listMenu} ${classes.icoMy}`}>
-            <NavLink to="/TechnomadFront/mypage">
-              {({ isActive }) => (
-                <>
-                  <span className={classes.menuIcon}>
-                    <IcoPerson onGreen={selectColor(isActive)} />
-                  </span>
-                  <span
-                    className={classes.menuName}
-                    style={{
-                      color: selectColor(isActive),
-                    }}
-                  >
-                    마이페이지
-                  </span>
-                </>
-              )}
+            <NavLink to={'javascript:alert("준비중입니다 :3");'}>
+              <>
+                <span className={classes.menuIcon}>
+                  <IcoPerson onGreen={selectColor()} />
+                </span>
+                <span
+                  className={classes.menuName}
+                  style={{
+                    color: selectColor(),
+                  }}
+                >
+                  마이페이지
+                </span>
+              </>
             </NavLink>
           </li>
         </ul>
