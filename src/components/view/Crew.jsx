@@ -66,13 +66,24 @@ function Crew() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className={`bgArea bg02`}>
+              <div className={`bgArea bg05`}>
                 <div className={`textWrap tal`}>
                   <p className={`main`}>
-                    <span className={`smalltxt`}>멍멍런</span>
-                    우리집 강아지 보러 올래?
+                    <span className={`smalltxt`}>낭만가득, 봉사시간은 덤!</span>
+                    서울숲 플로깅
                   </p>
-                  <p className={`desc`}>산책도 하고 담깅도 하고~</p>
+                  <p className={`desc`}>#튤립길 걸어요 #추천크루 #봉사</p>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={`bgArea bg06`}>
+                <div className={`textWrap tal`}>
+                  <p className={`main`}>
+                    <span className={`smalltxt`}>인증샷 이벤트</span>
+                    반려견과 함께해요~
+                  </p>
+                  <p className={`desc`}>#반려견 #멍멍런 #sns공유 #이벤트</p>
                 </div>
               </div>
             </SwiperSlide>

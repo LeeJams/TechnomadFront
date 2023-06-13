@@ -820,16 +820,20 @@ caption>span {
     background-image: url('./assets/images/slidebanner_01.png');
 }
 
-.slideBanner .bg02 {
-    background-color: rgba(255, 242, 199, 0.692);
-}
-
 .slideBanner .bg03 {
     background-image: url('./assets/images/slidebanner_03.png');
 }
 
 .slideBanner .bg04 {
     background-image: url('./assets/images/slidebanner_04.png');
+}
+
+.slideBanner .bg05 {
+    background-image: url('./assets/images/slidebanner_05.png');
+}
+
+.slideBanner .bg06 {
+    background-image: url('./assets/images/slidebanner_06.png');
 }
 
 .slideBanner .textWrap {
