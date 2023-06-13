@@ -8,9 +8,9 @@ const Map = forwardRef((props, ref) => {
   const navigate = useNavigate();
   const [map, setMap] = useState(null);
   const [position, setPosition] = useState([]);
+  const { setDistance } = props;
 
   useImperativeHandle(ref, () => ({
-    // 부모 컴포넌트에서 사용할 함수를 선언
     getLinePath,
   }));
 
@@ -34,6 +34,7 @@ const Map = forwardRef((props, ref) => {
   }, [navigate]);
 
   const success = (position) => {
+    // 초기 맵 셋팅 함수
     let mapContainer = document.getElementById("map"), // 지도를 표시할 div
       mapOption = {
         center: new kakao.maps.LatLng(
@@ -48,9 +49,9 @@ const Map = forwardRef((props, ref) => {
   };
 
   useEffect(() => {
+    // 선을 그리는 함수
     const makeLine = setInterval(() => {
       if (map) {
-        // 선을 구성하는 좌표 배열입니다. 이 좌표들을 이어서 선을 표시합니다
         let linePath = position;
 
         // 지도에 표시할 선을 생성합니다
@@ -64,12 +65,14 @@ const Map = forwardRef((props, ref) => {
 
         // 지도에 선을 표시합니다
         polyline.setMap(map);
+        setDistance(polyline.getLength());
       }
     }, 5000);
     return () => clearInterval(makeLine);
-  }, [map, position]);
+  }, [map, position, setDistance]);
 
   useEffect(() => {
+    // 현재 위치를 구하고 셋팅해주는 함수
     const position = setInterval(() => {
       if (map) {
         navigator.geolocation.getCurrentPosition((position) => {
@@ -88,6 +91,7 @@ const Map = forwardRef((props, ref) => {
   }, [map]);
 
   const moveToCurLocation = () => {
+    // 현재 내가 있는 위치로 이동하는 함수
     if (map) {
       navigator.geolocation.getCurrentPosition((position) => {
         const moveLatLon = new kakao.maps.LatLng(

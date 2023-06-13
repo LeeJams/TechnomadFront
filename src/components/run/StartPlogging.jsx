@@ -23,23 +23,24 @@ function StartPlogging() {
     startTime: new Date(),
   });
   const childComponentRef = useRef();
+  const [distance, setDistance] = useState(0);
 
-  useEffect(() => {
-    if (state.isCrew) {
-      const num = setInterval(() => {
-        if (crewNum < 12) {
-          const randomNum = Math.floor(Math.random() * 3) + 1;
-          setCrewNum(crewNum + randomNum);
-        }
-      }, 2000);
+  // useEffect(() => {
+  //   if (state.isCrew) {
+  //     const num = setInterval(() => {
+  //       if (crewNum < 12) {
+  //         const randomNum = Math.floor(Math.random() * 3) + 1;
+  //         setCrewNum(crewNum + randomNum);
+  //       }
+  //     }, 2000);
 
-      if (crewNum > 12) {
-        clearInterval(num);
-      }
+  //     if (crewNum > 12) {
+  //       clearInterval(num);
+  //     }
 
-      return () => clearInterval(num);
-    }
-  }, [crewNum, state.isCrew]);
+  //     return () => clearInterval(num);
+  //   }
+  // }, [crewNum, state.isCrew]);
 
   const endRun = (state) => {
     if (confirm("플로깅을 종료하시겠습니까?")) {
@@ -69,9 +70,14 @@ function StartPlogging() {
       </header>
 
       {/* 지도 */}
-      <Map ref={childComponentRef} />
+      <Map ref={childComponentRef} setDistance={setDistance} />
 
-      <Record isStart={isStart} endRun={endRun} isFinish={isFinish} />
+      <Record
+        isStart={isStart}
+        endRun={endRun}
+        isFinish={isFinish}
+        distance={distance}
+      />
 
       {/* time Alert 팝업 */}
       {state.isCrew && (
