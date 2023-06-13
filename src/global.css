@@ -818,6 +818,7 @@ caption>span {
 
 .slideBanner .bg01 {
     background-image: url('./assets/images/slidebanner_01.png');
+    background-position: 0 center;
 }
 
 .slideBanner .bg03 {
@@ -830,10 +831,12 @@ caption>span {
 
 .slideBanner .bg05 {
     background-image: url('./assets/images/slidebanner_05.png');
+    background-position: 0 center;
 }
 
 .slideBanner .bg06 {
     background-image: url('./assets/images/slidebanner_06.png');
+    background-position: 0 center;
 }
 
 .slideBanner .textWrap {
