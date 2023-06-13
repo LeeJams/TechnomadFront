@@ -12,22 +12,19 @@ export default function Record({ isStart, endRun, isFinish, distance }) {
         setTime((prev) => prev + 1);
       }, 1000);
 
-      const walk = setInterval(() => {
-        let add = (Math.random() * 10).toFixed(0);
-        setWalk((prev) => prev + Number(add));
-      }, 5000);
-
       if (isFinish) {
         clearInterval(timer);
-        clearInterval(walk);
       }
 
       return () => {
         clearInterval(timer);
-        clearInterval(walk);
       };
     }
   }, [isStart, isFinish]);
+
+  useEffect(() => {
+    setWalk((prev) => prev + distance * 100 * 14);
+  }, [distance]);
 
   const finish = () => {
     endRun({ time: timeString, walk, distance });
