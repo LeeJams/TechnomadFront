@@ -94,7 +94,7 @@ function Bottom() {
             </NavLink>
           </li>
           <li className={`${classes.listMenu} ${classes.icoMy}`}>
-            <NavLink to={'javascript:alert("준비중입니다 :3");'}>
+            <NavLink onClick={() => alert("준비중입니다 :3")}>
               <>
                 <span className={classes.menuIcon}>
                   <IcoPerson onGreen={selectColor()} />
