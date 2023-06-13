@@ -23,7 +23,7 @@ export default function Record({ isStart, endRun, isFinish, distance }) {
   }, [isStart, isFinish]);
 
   useEffect(() => {
-    setWalk((prev) => prev + distance * 100 * 14);
+    setWalk(distance * 100 * 14);
   }, [distance]);
 
   const finish = () => {
