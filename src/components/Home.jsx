@@ -111,7 +111,7 @@ function Home() {
           <p className={`desc`}>
             <strong>오</strong>늘의
             <strong>담</strong>깅<strong>완</strong>료!
-            <strong className={`.large}`}>오담완 챌린지</strong>
+            <strong className={`.large}`}>&nbsp;오담완 챌린지</strong>
           </p>
         </div>
       </section>

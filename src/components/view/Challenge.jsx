@@ -69,7 +69,7 @@ function Challenge() {
                     <span className={`smalltxt`}>매주 참가하는 재미</span>
                     26주 완성, 퍼펙트 그린 플랜!
                   </p>
-                  <p className={`desc gray`}>2023.06.01~2023.06.30</p>
+                  <p className={`desc`}>2023.06.01~2023.06.30</p>
                 </div>
               </div>
             </SwiperSlide>
