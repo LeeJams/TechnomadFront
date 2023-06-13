@@ -65,7 +65,7 @@ const Map = forwardRef((props, ref) => {
 
         // 지도에 선을 표시합니다
         polyline.setMap(map);
-        setDistance(polyline.getLength());
+        setDistance(Math.ceil(polyline.getLength()));
       }
     }, 5000);
     return () => clearInterval(makeLine);
