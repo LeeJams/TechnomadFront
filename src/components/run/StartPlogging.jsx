@@ -19,11 +19,11 @@ function StartPlogging() {
     isCrew: false,
     time: 0,
     walk: 0,
-    distance: 0,
+    distance: 0.0,
     startTime: new Date(),
   });
   const childComponentRef = useRef();
-  const [distance, setDistance] = useState(0);
+  const [distance, setDistance] = useState("0.00");
 
   // useEffect(() => {
   //   if (state.isCrew) {
