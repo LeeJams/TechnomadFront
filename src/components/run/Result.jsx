@@ -117,7 +117,7 @@ function Result() {
             <li>
               <div className={`label`}>수거한 쓰레기(L)</div>
               <div className={`textValue`}>
-                <span>12</span>
+                <span>0</span>
               </div>
             </li>
             <li>
