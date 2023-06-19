@@ -58,7 +58,7 @@ export default function Record({ isStart, endRun, isFinish, distance }) {
       window.DeviceOrientationEvent !== undefined &&
       typeof window.DeviceOrientationEvent.requestPermission === "function";
     if (!isSafariOver13) {
-      window.DeviceMotionEvent.requestPermission().then((response) => {
+      window.DeviceOrientationEvent.requestPermission().then((response) => {
         if (response === "granted") {
           startStepCounting();
         } else {
