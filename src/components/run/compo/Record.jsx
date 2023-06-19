@@ -54,7 +54,20 @@ export default function Record({ isStart, endRun, isFinish, distance }) {
         setWalk(stepCount);
       });
     }
-    startStepCounting();
+    const isSafariOver13 =
+      window.DeviceOrientationEvent !== undefined &&
+      typeof window.DeviceOrientationEvent.requestPermission === "function";
+    if (!isSafariOver13) {
+      window.DeviceMotionEvent.requestPermission().then((response) => {
+        if (response === "granted") {
+          startStepCounting();
+        } else {
+          alert("걸음 수 측정을 위해 권한이 필요합니다.");
+        }
+      });
+    } else {
+      startStepCounting();
+    }
   }, []);
 
   const finish = () => {
