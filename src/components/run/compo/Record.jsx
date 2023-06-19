@@ -54,10 +54,7 @@ export default function Record({ isStart, endRun, isFinish, distance }) {
         setWalk(stepCount);
       });
     }
-    const isSafariOver13 =
-      window.DeviceOrientationEvent !== undefined &&
-      typeof window.DeviceOrientationEvent.requestPermission === "function";
-    if (!isSafariOver13) {
+    if (isStart) {
       window.DeviceOrientationEvent.requestPermission().then((response) => {
         if (response === "granted") {
           startStepCounting();
@@ -65,10 +62,8 @@ export default function Record({ isStart, endRun, isFinish, distance }) {
           alert("걸음 수 측정을 위해 권한이 필요합니다.");
         }
       });
-    } else {
-      startStepCounting();
     }
-  }, []);
+  }, [isStart]);
 
   const finish = () => {
     endRun({ time: timeString, walk, distance });
