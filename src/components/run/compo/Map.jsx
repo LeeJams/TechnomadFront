@@ -50,31 +50,28 @@ const Map = forwardRef((props, ref) => {
 
   useEffect(() => {
     // 선을 그리는 함수
-    const makeLine = setInterval(() => {
-      if (map) {
-        let linePath = position;
+    if (map) {
+      let linePath = position;
 
-        // 지도에 표시할 선을 생성합니다
-        var polyline = new kakao.maps.Polyline({
-          path: linePath, // 선을 구성하는 좌표배열 입니다
-          strokeWeight: 5, // 선의 두께 입니다
-          strokeColor: "#FFAE00", // 선의 색깔입니다
-          strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
-          strokeStyle: "solid", // 선의 스타일입니다
-        });
+      // 지도에 표시할 선을 생성합니다
+      var polyline = new kakao.maps.Polyline({
+        path: linePath, // 선을 구성하는 좌표배열 입니다
+        strokeWeight: 5, // 선의 두께 입니다
+        strokeColor: "#FFAE00", // 선의 색깔입니다
+        strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+        strokeStyle: "solid", // 선의 스타일입니다
+      });
 
-        // 지도에 선을 표시합니다
-        polyline.setMap(map);
-        setDistance((polyline.getLength() / 1000).toFixed(2));
-      }
-    }, 5000);
-    return () => clearInterval(makeLine);
+      // 지도에 선을 표시합니다
+      polyline.setMap(map);
+      setDistance((polyline.getLength() / 1000).toFixed(2));
+    }
   }, [map, position, setDistance]);
 
   useEffect(() => {
     // 현재 위치를 구하고 셋팅해주는 함수
-    const position = setInterval(() => {
-      if (map) {
+    if (map) {
+      setInterval(() => {
         navigator.geolocation.getCurrentPosition((position) => {
           const moveLatLon = new kakao.maps.LatLng(
             position.coords.latitude,
@@ -85,9 +82,8 @@ const Map = forwardRef((props, ref) => {
             return prev;
           });
         });
-      }
-    }, 5000);
-    return () => clearInterval(position);
+      }, 5000);
+    }
   }, [map]);
 
   const moveToCurLocation = () => {
